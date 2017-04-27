@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<controls>
+		<control type="button" id="10">
+			<left>-1</left>
+			<top>-1</top>
+			<width>1</width>
+			<height>1</height>
+			<onfocus condition="Skin.HasSetting(CustomSplashVideo) + !IsEmpty(Skin.String(CustomSplashVideoPath))">PlayMedia($ESCINFO[Skin.String(CustomSplashVideoPath)])</onfocus>
+			<onfocus condition="Skin.HasSetting(StartupPlaylist) + !IsEmpty(Skin.String(StartupPlaylistPath))">PlayMedia($ESCINFO[Skin.String(StartupPlaylistPath)],isdir)</onfocus>
+			<onfocus condition="!Skin.HasSetting(CustomSplashVideo) + !Skin.HasSetting(StartupPlaylist) + IsEmpty(Skin.String(CustomSplashVideoPath)) + IsEmpty(Skin.String(StartupPlaylistPath))">PlayMedia(special://profile/intro.mp4)</onfocus>
+			<onfocus condition="Skin.HasSetting(StartupPlaylist) + !IsEmpty(Skin.String(StartupPlaylistPath))">PlayMedia($ESCINFO[Skin.String(StartupPlaylistPath)],isdir)</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<animation effect="fade" delay="1000" end="100">Focus</animation>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(CustomSplashImage) + !IsEmpty(Skin.String(CustomSplashImagePath))</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>$INFO[Skin.String(CustomSplashImagePath)]</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(CustomSplashImage) | IsEmpty(Skin.String(CustomSplashImagePath))</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>special://profile/Splash.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>
