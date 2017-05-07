@@ -424,254 +424,289 @@
 	<include name="HomeAddonItemsWeather">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeWeatherButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeWeatherButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeWeatherButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeWeatherButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeWeatherButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeWeatherButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsPictures">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomePicturesButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomePicturesButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomePicturesButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomePicturesButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomePicturesButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomePicturesButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsRadio">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeRadioButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeRadioButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeRadioButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeRadioButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeRadioButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeRadioButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsTV">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsVideos">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeVideosButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton7))]</icon>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton7))]</thumb>
 			<thumb>-</thumb>
 			<visible>!String.IsEmpty(Skin.String(HomeVideosButton7))</visible>
 		</item>
@@ -681,50 +716,57 @@
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton1))]</label>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton1))]</icon>
-			<thumb>-</thumb>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton1)])</onclick>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMoviesButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMoviesButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMoviesButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMoviesButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMoviesButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMoviesButton7))</visible>
 		</item>
 	</include>
@@ -732,256 +774,290 @@
 	<include name="HomeAddonItemsTVShows">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeTVShowsButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeTVShowsButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeTVShowsButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeTVShowsButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeTVShowsButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeTVShowsButton7))</visible>
 		</item>
 	</include>
-
 	<include name="HomeAddonItemsMusicVideos">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicVideosButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicVideosButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicVideosButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicVideosButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicVideosButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsMusic">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeMusicButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeMusicButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeMusicButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsPrograms">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeProgramsButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeProgramsButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeProgramsButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeProgramsButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeProgramsButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeProgramsButton7))</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsSystem">
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton1))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton1)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton1)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton1))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton1))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton1))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton2))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton2)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton2))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton2))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton2))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton3))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton3)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton3))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton3))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton3))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton4))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton4)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton4))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton4))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton4))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton5))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton5)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton5))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton5))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton5))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton6))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton6)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton6)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton6))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton6))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton6))</visible>
 		</item>
 		<item>
 			<label>$INFO[system.addontitle(Skin.String(HomeSystemButton7))]</label>
+			<onclick>InstallAddon($INFO[Skin.String(HomeSystemButton7)])</onclick>
 			<onclick>RunAddon($INFO[Skin.String(HomeSystemButton7)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeSystemButton7))]</icon>
-			<thumb>-</thumb>
+			<thumb>$INFO[system.addonicon(Skin.String(HomeSystemButton7))]</thumb>
+			<icon>DefaultAddonsUpdates.png</icon>
 			<visible>!String.IsEmpty(Skin.String(HomeSystemButton7))</visible>
 		</item>
 	</include>

@@ -1,6 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- VARIABLES -->
+	<variable name="PicturesWidgetContent">
+
+	</variable>
+	<variable name="ShortCuts">
+		<value condition="Skin.HasSetting(SuperShortCuts)">special://home/addons/plugin.program.super.favourites/chooser.py,changetitle=true&amp;property=</value>
+		<value>script.favourites,changetitle=true&amp;property=</value>
+	</variable>
+	<variable name="ShortCutslabel">
+		<value condition="Skin.hasSetting(SuperShortCuts)">Super </value>
+		<value></value>
+	</variable>
+	<variable name="PicturesWidgetContent">
+		<value condition="Skin.String(HomePicturesPath,1)">$INFO[Skin.String(HomePicturesPath1)]</value>
+		<value condition="Skin.String(HomePicturesPath,2)">$INFO[Skin.String(HomePicturesPath2)]</value>
+		<value condition="Skin.String(HomePicturesPath,3)">$INFO[Skin.String(HomePicturesPath3)]</value>
+		<value condition="Skin.String(HomePicturesPath,4)">$INFO[Skin.String(HomePicturesPath4)]</value>
+		<value condition="Skin.String(HomePicturesPath,5)">$INFO[Skin.String(HomePicturesPath5)]</value>
+		<value>special://skin/backgrounds/</value>
+	</variable>
+	<variable name="PicturesWidgetLabel">
+		<value condition="Skin.String(HomePicturesPath,1)">$INFO[Skin.String(HomePicturesPath1.Label)]</value>
+		<value condition="Skin.String(HomePicturesPath,2)">$INFO[Skin.String(HomePicturesPath2.Label)]</value>
+		<value condition="Skin.String(HomePicturesPath,3)">$INFO[Skin.String(HomePicturesPath3.Label)]</value>
+		<value condition="Skin.String(HomePicturesPath,4)">$INFO[Skin.String(HomePicturesPath4.Label)]</value>
+		<value condition="Skin.String(HomePicturesPath,5)">$INFO[Skin.String(HomePicturesPath5.Label)]</value>
+		<value>$LOCALIZE[33069]</value>
+	</variable>
+	<variable name="RadioWidgetContent">
+		<value condition="Skin.String(HomeRadioPath,1)">$INFO[Skin.String(HomeRadioPath1)]</value>
+		<value condition="Skin.String(HomeRadioPath,2)">$INFO[Skin.String(HomeRadioPath2)]</value>
+		<value condition="Skin.String(HomeRadioPath,3)">$INFO[Skin.String(HomeRadioPath3)]</value>
+		<value condition="Skin.String(HomeRadioPath,4)">$INFO[Skin.String(HomeRadioPath4)]</value>
+		<value condition="Skin.String(HomeRadioPath,5)">$INFO[Skin.String(HomeRadioPath5)]</value>
+		<value>pvr://channels/radio/$LOCALIZE[19287]/</value>
+	</variable>
+	<variable name="RadioWidgetLabel">
+		<value condition="Skin.String(HomeRadioPath,1)">$INFO[Skin.String(HomeRadioPath1.Label)]</value>
+		<value condition="Skin.String(HomeRadioPath,2)">$INFO[Skin.String(HomeRadioPath2.Label)]</value>
+		<value condition="Skin.String(HomeRadioPath,3)">$INFO[Skin.String(HomeRadioPath3.Label)]</value>
+		<value condition="Skin.String(HomeRadioPath,4)">$INFO[Skin.String(HomeRadioPath4.Label)]</value>
+		<value condition="Skin.String(HomeRadioPath,5)">$INFO[Skin.String(HomeRadioPath5.Label)]</value>
+		<value>$LOCALIZE[593]</value>
+	</variable>
+	<variable name="TVWidgetContent">
+		<value condition="Skin.String(HomeTVPath,1)">$INFO[Skin.String(HomeTVPath1)]</value>
+		<value condition="Skin.String(HomeTVPath,2)">$INFO[Skin.String(HomeTVPath2)]</value>
+		<value condition="Skin.String(HomeTVPath,3)">$INFO[Skin.String(HomeTVPath3)]</value>
+		<value condition="Skin.String(HomeTVPath,4)">$INFO[Skin.String(HomeTVPath4)]</value>
+		<value condition="Skin.String(HomeTVPath,5)">$INFO[Skin.String(HomeTVPath5)]</value>
+		<value>pvr://channels/tv/$LOCALIZE[19287]/</value>
+	</variable>
+	<variable name="TVWidgetLabel">
+		<value condition="Skin.String(HomeTVPath,1)">$INFO[Skin.String(HomeTVPath1.Label)]</value>
+		<value condition="Skin.String(HomeTVPath,2)">$INFO[Skin.String(HomeTVPath2.Label)]</value>
+		<value condition="Skin.String(HomeTVPath,3)">$INFO[Skin.String(HomeTVPath3.Label)]</value>
+		<value condition="Skin.String(HomeTVPath,4)">$INFO[Skin.String(HomeTVPath4.Label)]</value>
+		<value condition="Skin.String(HomeTVPath,5)">$INFO[Skin.String(HomeTVPath5.Label)]</value>
+		<value>$LOCALIZE[593]</value>
+	</variable>
+	<variable name="MoviesWidgetContent">
+		<value condition="Skin.String(HomeMoviesPath,1)">$INFO[Skin.String(HomeMoviesPath1)]</value>
+		<value condition="Skin.String(HomeMoviesPath,2)">$INFO[Skin.String(HomeMoviesPath2)]</value>
+		<value condition="Skin.String(HomeMoviesPath,3)">$INFO[Skin.String(HomeMoviesPath3)]</value>
+		<value condition="Skin.String(HomeMoviesPath,4)">$INFO[Skin.String(HomeMoviesPath4)]</value>
+		<value condition="Skin.String(HomeMoviesPath,5)">$INFO[Skin.String(HomeMoviesPath5)]</value>
+		<value>library://video/movies/recentlyaddedmovies.xml/</value>
+	</variable>
+	<variable name="MoviesWidgetLabel">
+		<value condition="Skin.String(HomeMoviesPath,1)">$INFO[Skin.String(HomeMoviesPath1.Label)]</value>
+		<value condition="Skin.String(HomeMoviesPath,2)">$INFO[Skin.String(HomeMoviesPath2.Label)]</value>
+		<value condition="Skin.String(HomeMoviesPath,3)">$INFO[Skin.String(HomeMoviesPath3.Label)]</value>
+		<value condition="Skin.String(HomeMoviesPath,4)">$INFO[Skin.String(HomeMoviesPath4.Label)]</value>
+		<value condition="Skin.String(HomeMoviesPath,5)">$INFO[Skin.String(HomeMoviesPath5.Label)]</value>
+		<value>$LOCALIZE[20386]</value>
+	</variable>
+	<variable name="TVShowsWidgetContent">
+		<value condition="Skin.String(HomeTVShowsPath,1)">$INFO[Skin.String(HomeTVShowsPath1)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,2)">$INFO[Skin.String(HomeTVShowsPath2)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,3)">$INFO[Skin.String(HomeTVShowsPath3)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,4)">$INFO[Skin.String(HomeTVShowsPath4)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,5)">$INFO[Skin.String(HomeTVShowsPath5)]</value>
+		<value>library://video/tvshows/recentlyaddedepisodes.xml/</value>
+	</variable>
+	<variable name="TVShowsWidgetLabel">
+		<value condition="Skin.String(HomeTVShowsPath,1)">$INFO[Skin.String(HomeTVShowsPath1.Label)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,2)">$INFO[Skin.String(HomeTVShowsPath2.Label)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,3)">$INFO[Skin.String(HomeTVShowsPath3.Label)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,4)">$INFO[Skin.String(HomeTVShowsPath4.Label)]</value>
+		<value condition="Skin.String(HomeTVShowsPath,5)">$INFO[Skin.String(HomeTVShowsPath5.Label)]</value>
+		<value>$LOCALIZE[20387]</value>
+	</variable>
+	<variable name="MusicVideosWidgetContent">
+		<value condition="Skin.String(HomeMusicVideosPath,1)">$INFO[Skin.String(HomeMusicVideosPath1)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,2)">$INFO[Skin.String(HomeMusicVideosPath2)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,3)">$INFO[Skin.String(HomeMusicVideosPath3)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,4)">$INFO[Skin.String(HomeMusicVideosPath4)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,5)">$INFO[Skin.String(HomeMusicVideosPath5)]</value>
+		<value>library://video/musicvideos/recentlyaddedmusicvideos.xml/</value>
+	</variable>
+	<variable name="MusicVideosWidgetLabel">
+		<value condition="Skin.String(HomeMusicVideosPath,1)">$INFO[Skin.String(HomeMusicVideosPath1.Label)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,2)">$INFO[Skin.String(HomeMusicVideosPath2.Label)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,3)">$INFO[Skin.String(HomeMusicVideosPath3.Label)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,4)">$INFO[Skin.String(HomeMusicVideosPath4.Label)]</value>
+		<value condition="Skin.String(HomeMusicVideosPath,5)">$INFO[Skin.String(HomeMusicVideosPath5.Label)]</value>
+		<value>$LOCALIZE[20390]</value>
+	</variable>
+	<variable name="MusicWidgetContent">
+		<value condition="Skin.String(HomeMusicPath,1)">$INFO[Skin.String(HomeMusicPath1)]</value>
+		<value condition="Skin.String(HomeMusicPath,2)">$INFO[Skin.String(HomeMusicPath2)]</value>
+		<value condition="Skin.String(HomeMusicPath,3)">$INFO[Skin.String(HomeMusicPath3)]</value>
+		<value condition="Skin.String(HomeMusicPath,4)">$INFO[Skin.String(HomeMusicPath4)]</value>
+		<value condition="Skin.String(HomeMusicPath,5)">$INFO[Skin.String(HomeMusicPath5)]</value>
+		<value>library://music/recentlyaddedalbums.xml/</value>
+	</variable>
+	<variable name="MusicWidgetLabel">
+		<value condition="Skin.String(HomeMusicPath,1)">$INFO[Skin.String(HomeMusicPath1.Label)]</value>
+		<value condition="Skin.String(HomeMusicPath,2)">$INFO[Skin.String(HomeMusicPath2.Label)]</value>
+		<value condition="Skin.String(HomeMusicPath,3)">$INFO[Skin.String(HomeMusicPath3.Label)]</value>
+		<value condition="Skin.String(HomeMusicPath,4)">$INFO[Skin.String(HomeMusicPath4.Label)]</value>
+		<value condition="Skin.String(HomeMusicPath,5)">$INFO[Skin.String(HomeMusicPath5.Label)]</value>
+		<value>$LOCALIZE[359]</value>
+	</variable>
+
+
 	<variable name="AddonLabel2">
 		<value condition="!String.IsEmpty(ListItem.Property(Addon.Status))">$INFO[ListItem.Property(Addon.Status)]</value>
 		<value condition="!String.IsEmpty(ListItem.AddonSize)">$INFO[ListItem.AddonSize]</value>

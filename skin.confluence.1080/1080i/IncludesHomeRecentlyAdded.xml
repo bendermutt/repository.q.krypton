@@ -3,7 +3,7 @@
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group" id="9003">
 			<depth>DepthMenu</depth>
-			<onup>20</onup>
+			<onup>9004</onup>
 			<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 			<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 			<visible>!Window.IsVisible(Favourites)</visible>
@@ -22,7 +22,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>20386</label>
+					<label>$LOCALIZE[20342] - $VAR[MoviesWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -42,7 +42,7 @@
 					<height>330</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
-					<onup>20</onup>
+					<onup>8016</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -141,86 +141,102 @@
 							<visible>Control.HasFocus(8000)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[MoviesWidgetContent]</content>
+				</control>
+				<control type="list" id="8016">
+					<visible>[Control.HasFocus(8000) | Control.HasFocus(8016)] + ![Skin.String(HomeMoviesPath1,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8016).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8016).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8016).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8016).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8016).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8016</onleft>
+					<onright>8016</onright>
+					<onup>20</onup>
+					<ondown>8000</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeMoviesPath,)</onclick>
+							<visible>![Skin.String(HomeMoviesPath1,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,)] | !Skin.String(HomeMoviesPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeMoviesPath,1)</onclick>
+							<visible>!Skin.String(HomeMoviesPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeMoviesPath,2)</onclick>
+							<visible>!Skin.String(HomeMoviesPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeMoviesPath,3)</onclick>
+							<visible>!Skin.String(HomeMoviesPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeMoviesPath,4)</onclick>
+							<visible>!Skin.String(HomeMoviesPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeMoviesPath,5)</onclick>
+							<visible>!Skin.String(HomeMoviesPath5,)</visible>
 						</item>
 					</content>
 				</control>
@@ -261,7 +277,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>20387</label>
+					<label>$LOCALIZE[20343] - $VAR[TVShowsWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -279,7 +295,7 @@
 					<height>360</height>
 					<onleft>8001</onleft>
 					<onright>8001</onright>
-					<onup>20</onup>
+					<onup>8017</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -404,86 +420,102 @@
 							<visible>Control.HasFocus(8001)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[TVShowsWidgetContent]</content>
+				</control>
+				<control type="list" id="8017">
+					<visible>[Control.HasFocus(8001) | Control.HasFocus(8017)] + ![Skin.String(HomeTVShowsPath1,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8017).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8017).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8017).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8017).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8017).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8017</onleft>
+					<onright>8017</onright>
+					<onup>20</onup>
+					<ondown>8001</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.1.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,)</onclick>
+							<visible>![Skin.String(HomeTVShowsPath1,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,)] | !Skin.String(HomeTVShowsPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.2.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,1)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.3.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,2)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.4.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,3)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.5.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,4)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)] - $INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.6.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)] - $INFO[Window.Property(LatestEpisode.7.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.7.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)] - $INFO[Window.Property(LatestEpisode.8.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.8.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)] - $INFO[Window.Property(LatestEpisode.9.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.9.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)] - $INFO[Window.Property(LatestEpisode.10.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.10.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,5)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath5,)</visible>
 						</item>
 					</content>
 				</control>
@@ -524,7 +556,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>359</label>
+					<label>$LOCALIZE[10005] - $VAR[MusicWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -543,7 +575,7 @@
 					<height>360</height>
 					<onleft>8002</onleft>
 					<onright>8002</onright>
-					<onup>20</onup>
+					<onup>8019</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -668,96 +700,102 @@
 							<visible>Control.HasFocus(8002)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[MusicWidgetContent]</content>
+				</control>
+				<control type="list" id="8019">
+					<visible>[Control.HasFocus(8002) | Control.HasFocus(8019)] + ![Skin.String(HomeMusicPath1,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8019).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8019).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8019).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8019).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8019).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8019</onleft>
+					<onright>8019</onright>
+					<onup>20</onup>
+					<ondown>8002</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeMusicPath,)</onclick>
+							<visible>![Skin.String(HomeMusicPath1,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,) + Skin.String(HomeMusicPath5,)] | !Skin.String(HomeMusicPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeMusicPath,1)</onclick>
+							<visible>!Skin.String(HomeMusicPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeMusicPath,2)</onclick>
+							<visible>!Skin.String(HomeMusicPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeMusicPath,3)</onclick>
+							<visible>!Skin.String(HomeMusicPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeMusicPath,4)</onclick>
+							<visible>!Skin.String(HomeMusicPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.7.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.8.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.9.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.9.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.10.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.10.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeMusicPath,5)</onclick>
+							<visible>!Skin.String(HomeMusicPath5,)</visible>
 						</item>
 					</content>
 				</control>
@@ -799,7 +837,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>768</width>
-					<label>20386</label>
+					<label>$LOCALIZE[20342] - $VAR[MoviesWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -813,7 +851,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>720</width>
-					<label>20387</label>
+					<label>$LOCALIZE[20343] - $VAR[TVShowsWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -821,19 +859,15 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="list" id="8003">
-					<animation effect="slide" start="0,0" end="128,0" time="0" condition="String.IsEqual(Container(8003).NumItems,6)">conditional</animation>
-					<animation effect="slide" start="0,0" end="256,0" time="0" condition="String.IsEqual(Container(8003).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="384,0" time="0" condition="String.IsEqual(Container(8003).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="512,0" time="0" condition="String.IsEqual(Container(8003).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container(8003).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="768,0" time="0" condition="String.IsEqual(Container(8003).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="128,0" time="0" condition="String.IsEqual(Container(8003).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="256,0" time="0" condition="String.IsEqual(Container(8003).NumItems,1)">conditional</animation>
 					<left>5</left>
 					<top>0</top>
 					<width>768</width>
 					<height>330</height>
 					<onleft>8004</onleft>
 					<onright>8004</onright>
-					<onup>20</onup>
+					<onup>8014</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -932,101 +966,114 @@
 							<visible>Control.HasFocus(8003)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[MoviesWidgetContent]</content>
+				</control>
+				<control type="list" id="8014">
+					<visible>[Control.HasFocus(8003) | Control.HasFocus(8014)] + ![Skin.String(HomeMoviesPath1,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8014).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8014).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8014).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8014).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8014).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8014</onleft>
+					<onright>8014</onright>
+					<onup>20</onup>
+					<ondown>8003</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeMoviesPath,)</onclick>
+							<visible>![Skin.String(HomeMoviesPath1,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,) + Skin.String(HomeMoviesPath5,)] | !Skin.String(HomeMoviesPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeMoviesPath,1)</onclick>
+							<visible>!Skin.String(HomeMoviesPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeMoviesPath,2)</onclick>
+							<visible>!Skin.String(HomeMoviesPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeMoviesPath,3)</onclick>
+							<visible>!Skin.String(HomeMoviesPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeMoviesPath,4)</onclick>
+							<visible>!Skin.String(HomeMoviesPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
-							<label2 />
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
-							<thumb>-</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeMoviesPath,5)</onclick>
+							<visible>!Skin.String(HomeMoviesPath5,)</visible>
 						</item>
 					</content>
 				</control>
 				<control type="list" id="8004">
-					<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container(8004).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(8004).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container(8004).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container(8004).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container(8004).NumItems,1)">conditional</animation>
 					<left>1080</left>
 					<top>0</top>
 					<width>720</width>
 					<height>360</height>
 					<onleft>8003</onleft>
 					<onright>8003</onright>
-					<onup>20</onup>
+					<onup>8015</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -1151,86 +1198,102 @@
 							<visible>Control.HasFocus(8004)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[TVShowsWidgetContent]</content>
+				</control>
+				<control type="list" id="8015">
+					<visible>[Control.HasFocus(8004) | Control.HasFocus(8015)] + ![Skin.String(HomeTVShowsPath1,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8015).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8015).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8015).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8015).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8015).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8015</onleft>
+					<onright>8015</onright>
+					<onup>20</onup>
+					<ondown>8004</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.1.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,)</onclick>
+							<visible>![Skin.String(HomeTVShowsPath1,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,) + Skin.String(HomeTVShowsPath5,)] | !Skin.String(HomeTVShowsPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.2.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,1)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.3.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,2)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.4.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,3)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.5.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,4)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)] - $INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.6.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)] - $INFO[Window.Property(LatestEpisode.7.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.7.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)] - $INFO[Window.Property(LatestEpisode.8.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.8.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)] - $INFO[Window.Property(LatestEpisode.9.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.9.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)] - $INFO[Window.Property(LatestEpisode.10.EpisodeNo)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.10.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeTVShowsPath,5)</onclick>
+							<visible>!Skin.String(HomeTVShowsPath5,)</visible>
 						</item>
 					</content>
 				</control>
@@ -1295,7 +1358,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>20390</label>
+					<label>$LOCALIZE[20389] - $VAR[MusicVideosWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -1313,7 +1376,7 @@
 					<height>360</height>
 					<onleft>8005</onleft>
 					<onright>8005</onright>
-					<onup>20</onup>
+					<onup>8018</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -1438,86 +1501,102 @@
 							<visible>Control.HasFocus(8005)</visible>
 						</control>
 					</focusedlayout>
+					<content>$VAR[MusicVideosWidgetContent]</content>
+				</control>
+				<control type="list" id="8018">
+					<visible>[Control.HasFocus(8005) | Control.HasFocus(8018)] + ![Skin.String(HomeMusicVideosPath1,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8018).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8018).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8018).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8018).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8018).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8018</onleft>
+					<onright>8018</onright>
+					<onup>20</onup>
+					<ondown>8005</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.1.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.1.Artist)] - $INFO[Window.Property(LatestMusicVideo.1.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.1.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.1.Title))</visible>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,)</onclick>
+							<visible>![Skin.String(HomeMusicVideosPath1,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,) + Skin.String(HomeMusicVideosPath5,)] | !Skin.String(HomeMusicVideosPath,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.2.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.2.Artist)] - $INFO[Window.Property(LatestMusicVideo.2.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.2.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.2.Title))</visible>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,1)</onclick>
+							<visible>!Skin.String(HomeMusicVideosPath1,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.3.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.3.Artist)] - $INFO[Window.Property(LatestMusicVideo.3.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.3.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.3.Title))</visible>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,2)</onclick>
+							<visible>!Skin.String(HomeMusicVideosPath2,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.4.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.4.Artist)] - $INFO[Window.Property(LatestMusicVideo.4.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.4.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.4.Title))</visible>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,3)</onclick>
+							<visible>!Skin.String(HomeMusicVideosPath3,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.5.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.5.Artist)] - $INFO[Window.Property(LatestMusicVideo.5.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.5.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.5.Title))</visible>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,4)</onclick>
+							<visible>!Skin.String(HomeMusicVideosPath4,)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.6.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.6.Artist)] - $INFO[Window.Property(LatestMusicVideo.6.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.6.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.6.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.7.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.7.Artist)] - $INFO[Window.Property(LatestMusicVideo.7.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.7.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.7.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.8.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.8.Artist)] - $INFO[Window.Property(LatestMusicVideo.8.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.8.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.8.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.9.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.9.Artist)] - $INFO[Window.Property(LatestMusicVideo.9.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.9.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.9.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.9.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestMusicVideo.10.Title)]</label>
-							<label2>$INFO[Window.Property(LatestMusicVideo.10.Artist)] - $INFO[Window.Property(LatestMusicVideo.10.Plot)]</label2>
-							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.10.Path)])</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestMusicVideo.10.Thumb)]</thumb>
-							<visible>!String.IsEmpty(Window.Property(LatestMusicVideo.10.Title))</visible>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeMusicVideosPath,5)</onclick>
+							<visible>!Skin.String(HomeMusicVideosPath5,)</visible>
 						</item>
 					</content>
 				</control>
@@ -1558,7 +1637,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>$LOCALIZE[19023]: $LOCALIZE[593]</label>
+					<label>$LOCALIZE[19023] - $VAR[TVWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -1578,7 +1657,7 @@
 					<height>360</height>
 					<onleft>8006</onleft>
 					<onright>8006</onright>
-					<onup>20</onup>
+					<onup>8013</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -1703,7 +1782,104 @@
 							<visible>Control.HasFocus(8006)</visible>
 						</control>
 					</focusedlayout>
-					<content>pvr://channels/tv/All channels/</content>
+					<content>$VAR[TVWidgetContent]</content>
+				</control>
+				<control type="list" id="8013">
+					<visible>[Control.HasFocus(8006) | Control.HasFocus(8013)] + ![Skin.String(HomeTVPath1,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8013).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8013).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8013).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8013).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8013).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8013</onleft>
+					<onright>8013</onright>
+					<onup>20</onup>
+					<ondown>8006</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeTVPath,)</onclick>
+							<visible>![Skin.String(HomeTVPath1,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,) + Skin.String(HomeTVPath5,)] | !Skin.String(HomeTVPath,)</visible>
+						</item>
+						<item>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeTVPath,1)</onclick>
+							<visible>!Skin.String(HomeTVPath1,)</visible>
+						</item>
+						<item>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeTVPath,2)</onclick>
+							<visible>!Skin.String(HomeTVPath2,)</visible>
+						</item>
+						<item>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeTVPath,3)</onclick>
+							<visible>!Skin.String(HomeTVPath3,)</visible>
+						</item>
+						<item>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeTVPath,4)</onclick>
+							<visible>!Skin.String(HomeTVPath4,)</visible>
+						</item>
+						<item>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeTVPath,5)</onclick>
+							<visible>!Skin.String(HomeTVPath5,)</visible>
+						</item>
+					</content>
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
@@ -1742,7 +1918,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>$LOCALIZE[19024]: $LOCALIZE[593]</label>
+					<label>$LOCALIZE[19024] - $VAR[RadioWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -1762,7 +1938,7 @@
 					<height>360</height>
 					<onleft>8007</onleft>
 					<onright>8007</onright>
-					<onup>20</onup>
+					<onup>8012</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -1887,7 +2063,104 @@
 							<visible>Control.HasFocus(8007)</visible>
 						</control>
 					</focusedlayout>
-					<content>pvr://channels/radio/All channels/</content>
+					<content>$VAR[RadioWidgetContent]</content>
+				</control>
+				<control type="list" id="8012">
+					<visible>[Control.HasFocus(8007) | Control.HasFocus(8012)] + ![Skin.String(HomeRadioPath1,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8012).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8012).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8012).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8012).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8012).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8012</onleft>
+					<onright>8012</onright>
+					<onup>8013</onup>
+					<ondown>8007</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomeRadioPath,)</onclick>
+							<visible>![Skin.String(HomeRadioPath1,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,) + Skin.String(HomeRadioPath5,)] | !Skin.String(HomeRadioPath,)</visible>
+						</item>
+						<item>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomeRadioPath,1)</onclick>
+							<visible>!Skin.String(HomeRadioPath1,)</visible>
+						</item>
+						<item>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomeRadioPath,2)</onclick>
+							<visible>!Skin.String(HomeRadioPath2,)</visible>
+						</item>
+						<item>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomeRadioPath,3)</onclick>
+							<visible>!Skin.String(HomeRadioPath3,)</visible>
+						</item>
+						<item>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomeRadioPath,4)</onclick>
+							<visible>!Skin.String(HomeRadioPath4,)</visible>
+						</item>
+						<item>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomeRadioPath,5)</onclick>
+							<visible>!Skin.String(HomeRadioPath5,)</visible>
+						</item>
+					</content>
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
@@ -1917,7 +2190,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(7) + Weather.IsFetched + Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(7) + Weather.IsFetched + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -1965,7 +2238,7 @@
 							<left>15</left>
 							<top>15</top>
 							<width>330</width>
-							<height>232</height>
+							<height>300</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="8">button-nofocus.png</bordertexture>
@@ -2011,7 +2284,7 @@
 							<left>15</left>
 							<top>15</top>
 							<width>330</width>
-							<height>232</height>
+							<height>300</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="8">folder-focus.png</bordertexture>
@@ -2022,7 +2295,7 @@
 							<left>15</left>
 							<top>15</top>
 							<width>330</width>
-							<height>232</height>
+							<height>300</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<bordertexture border="8">button-nofocus.png</bordertexture>
@@ -2082,7 +2355,7 @@
 							<icon>$INFO[Window(weather).Property(Day0.OutlookIcon)]</icon> 
 							<property name="HighTemp">$INFO[Window(weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,0)</onclick>
 						</item>
 						<item>
 							<label>$INFO[Window(weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day1.Title)]  $INFO[Window(weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
@@ -2090,7 +2363,7 @@
 							<icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,1)</onclick>
 						</item>
 						<item>
 							<label>$INFO[Window(weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day2.Title)]  $INFO[Window(weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
@@ -2098,7 +2371,7 @@
 							<icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,2)</onclick>
 						</item>
 						<item>
 							<label>$INFO[Window(weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day3.Title)]  $INFO[Window(weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
@@ -2106,7 +2379,7 @@
 							<icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,3)</onclick>
 						</item>
 						<item>
 							<label>$INFO[Window(weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day4.Title)]  $INFO[Window(weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</label>
@@ -2114,15 +2387,15 @@
 							<icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						</item>
+							<onclick>ActivateWindowAndFocus(Weather, 51,4)</onclick>
+						</item>	
 						<item>
 							<label>$INFO[Window(weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day5.Title)]  $INFO[Window(weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</label>
 							<label2>$INFO[Window(weather).Property(Day5.Outlook)]</label2>
 							<icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,5)</onclick>
 						</item>
 						<item>
 							<label>$INFO[Window(weather).Property(Day6.LowTemp)]$INFO[System.TemperatureUnits]  $INFO[Window(weather).Property(Day6.Title)]  $INFO[Window(weather).Property(Day6.HighTemp)]$INFO[System.TemperatureUnits]</label>
@@ -2130,7 +2403,7 @@
 							<icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
 							<property name="HighTemp">$INFO[Window(weather).Property(Day6.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window(weather).Property(Day6.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
+							<onclick>ActivateWindowAndFocus(Weather, 51,6)</onclick>
 						</item>
 					</content>
 				</control>
@@ -2162,7 +2435,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(4) + Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(4) + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2170,7 +2443,7 @@
 					<top>330</top>
 					<height>30</height>
 					<width>1080</width>
-					<label>33069</label>
+					<label>$LOCALIZE[10002] - $VAR[PicturesWidgetLabel]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -2187,7 +2460,7 @@
 					<height>360</height>
 					<onleft>8009</onleft>
 					<onright>8009</onright>
-					<onup>20</onup>
+					<onup>8011</onup>
 					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
 					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
 					<viewtype label="535">list</viewtype>
@@ -2312,7 +2585,104 @@
 							<visible>Control.HasFocus(8009)</visible>
 						</control>
 					</focusedlayout>
-					<content>special://skin/backgrounds/</content>
+					<content>$VAR[PicturesWidgetContent]</content>
+				</control>
+				<control type="list" id="8011">
+					<visible>[Control.HasFocus(8009) | Control.HasFocus(8011)] + ![Skin.String(HomePicturesPath1,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath,)]</visible>
+					<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Container(8011).NumItems,5)">conditional</animation>
+					<animation effect="slide" start="0,0" end="56,0" time="0" condition="String.IsEqual(Container(8011).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8011).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8011).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8011).NumItems,1)">conditional</animation>
+					<left>732</left>
+					<top>-66</top>
+					<width>350</width>
+					<height>56</height>
+					<onleft>8011</onleft>
+					<onright>8011</onright>
+					<onup>20</onup>
+					<ondown>8009</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56" width="56">
+						<control type="image">
+							<description>background</description>
+							<left>2</left>
+							<top>2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture diffuse="selected">RecentAddedBack.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>6</top>
+							<width>44</width>
+							<height>44</height>
+							<font>font30</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>12310</label>
+							<onclick>Skin.SetString(HomePicturesPath,)</onclick>
+							<visible>![Skin.String(HomePicturesPath1,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,) + Skin.String(HomePicturesPath5,)] | !Skin.String(HomePicturesPath,)</visible>
+						</item>
+						<item>
+							<label>12311</label>
+							<onclick>Skin.SetString(HomePicturesPath,1)</onclick>
+							<visible>!Skin.String(HomePicturesPath1,)</visible>
+						</item>
+						<item>
+							<label>12312</label>
+							<onclick>Skin.SetString(HomePicturesPath,2)</onclick>
+							<visible>!Skin.String(HomePicturesPath2,)</visible>
+						</item>
+						<item>
+							<label>12313</label>
+							<onclick>Skin.SetString(HomePicturesPath,3)</onclick>
+							<visible>!Skin.String(HomePicturesPath3,)</visible>
+						</item>
+						<item>
+							<label>12314</label>
+							<onclick>Skin.SetString(HomePicturesPath,4)</onclick>
+							<visible>!Skin.String(HomePicturesPath4,)</visible>
+						</item>
+						<item>
+							<label>12315</label>
+							<onclick>Skin.SetString(HomePicturesPath,5)</onclick>
+							<visible>!Skin.String(HomePicturesPath5,)</visible>
+						</item>
+					</content>
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
@@ -2342,7 +2712,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(1) + Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(1) + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2500,7 +2870,7 @@
 							<label2>$INFO[System.Uptime]</label2>
 							<onclick>noop</onclick>
 							<icon>system/uptime.png</icon>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 95,0)</onclick>
 						</item>
 						<item>
 							<label>12395</label>
@@ -2508,7 +2878,7 @@
 							<onclick>noop</onclick>
 							<icon>system/battery_100.png</icon>
 							<visible>Integer.IsGreater(System.BatteryLevel,60)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 95,0)</onclick>
 						</item>
 						<item>
 							<label>12395</label>
@@ -2516,7 +2886,7 @@
 							<onclick>noop</onclick>
 							<icon>system/battery_50.png</icon>
 							<visible>Integer.IsGreater(System.BatteryLevel,20) + !Integer.IsGreater(System.BatteryLevel,60)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 95,0)</onclick>
 						</item>
 						<item>
 							<label>12395</label>
@@ -2524,7 +2894,7 @@
 							<onclick>noop</onclick>
 							<icon>system/battery_10.png</icon>
 							<visible>Integer.IsGreater(System.BatteryLevel,5) + !Integer.IsGreater(System.BatteryLevel,20)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 95,0)</onclick>
 						</item>
 						<item>
 							<label>12395</label>
@@ -2532,7 +2902,7 @@
 							<onclick>noop</onclick>
 							<icon>system/battery_critical.png</icon>
 							<visible>Integer.IsGreater(System.BatteryLevel,0) + !Integer.IsGreater(System.BatteryLevel,5)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 95,0)</onclick>
 						</item>
 						<item>
 							<label>705</label>
@@ -2540,7 +2910,7 @@
 							<onclick>noop</onclick>
 							<icon>system/connected.png</icon>
 							<visible>System.InternetState</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 96,0)</onclick>
 						</item>
 						<item>
 							<label>705</label>
@@ -2548,7 +2918,7 @@
 							<onclick>noop</onclick>
 							<icon>system/disconnected.png</icon>
 							<visible>!System.InternetState</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 96,0)</onclick>
 						</item>
 						<item>
 							<label>13280</label>
@@ -2556,7 +2926,7 @@
 							<onclick>noop</onclick>
 							<icon>system/video.png</icon>
 							<visible>!Integer.IsGreater(System.GPUTemperature,0)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 97,0)</onclick>
 						</item>
 						<item>
 							<label>13280</label>
@@ -2564,7 +2934,7 @@
 							<onclick>noop</onclick>
 							<icon>system/video.png</icon>
 							<visible>Integer.IsGreater(System.GPUTemperature,0)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 97,0)</onclick>
 						</item>
 						<item>
 							<label>CPU</label>
@@ -2572,7 +2942,7 @@
 							<onclick>noop</onclick>
 							<icon>system/cpu.png</icon>
 							<visible>Integer.IsGreater(System.CPUTemperature,0)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 98,0)</onclick>
 						</item>
 						<item>
 							<label>CPU</label>
@@ -2581,21 +2951,21 @@
 							<icon>system/cpu.png</icon>
 							<property name="Label3">$INFO[System.CpuFrequency]</property>
 							<visible>!Integer.IsGreater(System.CPUTemperature,0)</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 98,0)</onclick>
 						</item>
 						<item>
 							<label>158</label>
 							<label2>$INFO[System.Memory(free.percent)] $LOCALIZE[156]</label2>
 							<onclick>noop</onclick>
 							<icon>system/memory.png</icon>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 98,0)</onclick>
 						</item>
 						<item>
 							<label>154</label>
 							<label2>$INFO[System.FreeSpacePercent]</label2>
 							<onclick>noop</onclick>
 							<icon>system/storage.png</icon>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 94,0)</onclick>
 						</item>
 						<item>
 							<label>19020</label>
@@ -2603,198 +2973,18 @@
 							<onclick>noop</onclick>
 							<icon>system/pvr.png</icon>
 							<visible>PVR.HasTVChannels</visible>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 99,0)</onclick>
 						</item>
 						<item>
 							<label>19114</label>
 							<label2>$INFO[System.BuildVersion]</label2>
 							<onclick>noop</onclick>
 							<icon>system/system.png</icon>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<onclick>ActivateWindowAndFocus(systeminfo, 100,0)</onclick>
 						</item>
 					</content>
 				</control>
 				<control type="button">	
-					<description>left Arrow</description>
-					<left>-60</left>
-					<top>135</top>
-					<width>45</width>
-					<height>60</height>
-					<texturefocus>arrow-big-left.png</texturefocus>
-					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8010,-1)</onclick>
-					<visible>Control.HasFocus(8010) + Container(8010).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<left>1815</left>
-					<top>135</top>
-					<width>45</width>
-					<height>60</height>
-					<texturefocus>arrow-big-right.png</texturefocus>
-					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8010,1)</onclick>
-					<visible>Control.HasFocus(8010) + Container(8010).HasNext</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-			</control>
-			<control type="group">
-				<left>60</left>
-				<top>75</top>
-				<visible>Container(9000).Hasfocus(4) + Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
-				<include>VisibleFadeEffect</include>
-				<control type="label">
-					<description>Title label</description>
-					<left>360</left>
-					<top>330</top>
-					<height>30</height>
-					<width>1080</width>
-					<label>33069</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="list" id="8010">
-					<animation effect="slide" start="0,0" end="225,0" time="0" condition="String.IsEqual(Container(8010).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container(8010).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="675,0" time="0" condition="String.IsEqual(Container(8010).NumItems,1)">conditional</animation>
-					<left>0</left>
-					<top>0</top>
-					<width>1800</width>
-					<height>360</height>
-					<onleft>8010</onleft>
-					<onright>8010</onright>
-					<onup>20</onup>
-					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
-					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<orientation>Horizontal</orientation>
-					<itemlayout height="330" width="450">
-						<control type="image">
-							<description>background</description>
-							<left>0</left>
-							<top>0</top>
-							<width>450</width>
-							<height>330</height>
-							<texture border="22">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<left>15</left>
-							<top>15</top>
-							<width>420</width>
-							<height>232</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="8">button-nofocus.png</bordertexture>
-							<bordersize>8</bordersize>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<top>252</top>
-							<width>390</width>
-							<height>30</height>
-							<font>font10</font>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<top>278</top>
-							<width>390</width>
-							<height>30</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="330" width="450">
-						<control type="image">
-							<description>background</description>
-							<left>0</left>
-							<top>0</top>
-							<width>450</width>
-							<height>330</height>
-							<texture border="22">RecentAddedBack.png</texture>
-						</control>
-						<control type="image">
-							<left>15</left>
-							<top>15</top>
-							<width>420</width>
-							<height>232</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="8">folder-focus.png</bordertexture>
-							<bordersize>8</bordersize>
-							<visible>Control.HasFocus(8010)</visible>
-						</control>
-						<control type="image">
-							<left>15</left>
-							<top>15</top>
-							<width>420</width>
-							<height>232</height>
-							<aspectratio>scale</aspectratio>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<bordertexture border="8">button-nofocus.png</bordertexture>
-							<bordersize>8</bordersize>
-							<visible>!Control.HasFocus(8010)</visible>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<top>252</top>
-							<width>390</width>
-							<height>30</height>
-							<font>font10</font>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<top>278</top>
-							<width>390</width>
-							<height>30</height>
-							<font>font12</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(8010)</visible>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<top>278</top>
-							<width>390</width>
-							<height>30</height>
-							<font>font12</font>
-							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(8010)</visible>
-						</control>
-					</focusedlayout>
-					<content>special://skin/backgrounds/</content>
-				</control>
-				<control type="button">
 					<description>left Arrow</description>
 					<left>-60</left>
 					<top>135</top>

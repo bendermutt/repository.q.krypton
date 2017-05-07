@@ -63,7 +63,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.1080" version="3.0.51" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
+<addon id="skin.confluence.1080" version="3.0.52" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 	</requires>
@@ -212,7 +212,7 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
-		<news>Added &quot;Music videos&quot;-button to Home \ Added widgets to all HomeItems \ Added 2 add-on shortcuts per HomeItem for 7 total \ Added seperate add-on shortcuts to all HomeItems \ Added option to disable widgets per type \ Added subtitle &amp; audio actions to onup/ondown from VideoOSD's pause-button \ Added image &amp; video splash options \ Added &quot;Favourites&quot;-button to shutdownmenu \ Added &quot;Settings&quot;-button to shutdownmenu (only visible if &quot;Programs&quot; is disabled) \ Added Open/LibreELEC-button to Program's submenu \ Converted to 1080 \ Removed System from Home (System's submenu now under Programs) \ Updated addon.xml</news>
+		<news>Added icon-fonts \ Added install-option &amp; fallback-icon to all add-on shortcuts \ Added 5 custom-path options to home-widgets (except weather &amp; programs) \ Added onscreen swidget \ Added appropriate onclick-actions to weather- &amp; program-widgets \ Added a section to skinsettings to manage widget-content \ Added preset 7 clear-option to widget- &amp; addon shortcuts-section in skinsettings \ Added custom_overlay and grids (Debug, Layout &amp; Phi) \ Added smartplaylists for movies, episodes, musicvideos &amp; music \ Added &quot;Swidgets&quot; (that's right, you read it first here) for fast &amp; easy switching of widget content \ Added skin-settings to bootmenu \ Edited weather-layout to accomodate weather widgets&apos; onclick-actions</news>
 	</extension>
 </addon>
 </addons>

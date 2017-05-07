@@ -83,6 +83,41 @@
 			<filename>Roboto-Bold.ttf</filename>
 			<size>120</size>
 		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
+		</font>
 	</fontset>
 	<fontset id="DysLexicClassic" idloc="31395">
 		<!-- Classic DysLexic Fonts -->
@@ -166,6 +201,41 @@
 			<name>WeatherTemp</name>
 			<filename>OpenDyslexicAlta-Bold.ttf</filename>
 			<size>120</size>
+		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
 		</font>
 	</fontset>
 	<fontset id="DysMaxicClassic" idloc="31396">
@@ -251,6 +321,41 @@
 			<filename>OpenDyslexicAlta-Bold.ttf</filename>
 			<size>120</size>
 		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
+		</font>
 	</fontset>
 	<fontset id="DysLexic" idloc="31393">
 		<!-- DysLexic Fonts -->
@@ -334,6 +439,41 @@
 			<name>WeatherTemp</name>
 			<filename>OpenDyslexic3-Bold.ttf</filename>
 			<size>120</size>
+		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
 		</font>
 	</fontset>
 	<fontset id="DysMaxic" idloc="31394">
@@ -419,6 +559,41 @@
 			<filename>OpenDyslexic3-Bold.ttf</filename>
 			<size>120</size>
 		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
+		</font>
 	</fontset>
 	<fontset id="Massive" idloc="15110">
 		<!-- Normal Fonts -->
@@ -502,6 +677,40 @@
 			<name>WeatherTemp</name>
 			<filename>Roboto-Bold.ttf</filename>
 			<size>120</size>
+		</font>		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
 		</font>
 	</fontset>
 	<fontset id="DefaultNoCaps" idloc="31391">
@@ -586,6 +795,40 @@
 			<name>WeatherTemp</name>
 			<filename>Roboto-Bold.ttf</filename>
 			<size>120</size>
+		</font>		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
 		</font>
 	</fontset>
 	<fontset id="Arial" idloc="31392">
@@ -679,6 +922,41 @@
 			<filename>arial.ttf</filename>
 			<size>120</size>
 			<style>bold</style>
+		</font>
+		<font>
+			<name>IconXXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>IconXS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>IconS</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>IconM</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>IconL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>IconXXL</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>44</size>
 		</font>
 	</fontset>
 </fonts>

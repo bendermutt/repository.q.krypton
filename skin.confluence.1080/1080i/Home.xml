@@ -1213,18 +1213,6 @@
 					<include>HomeAddonItemsPrograms</include>
 				</content>
 			</control>
-			<control type="fixedlist" id="710">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(710).NumItems,2) | String.IsEqual(Container(710).NumItems,4) | String.IsEqual(Container(710).NumItems,6)">conditional</animation>
-				<visible>Container(9000).HasFocus(5)</visible>
-				<onleft>710</onleft>
-				<onright>710</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsSettings</include>
-				</content>
-			</control>
 		</control>
 		<control type="group">
 			<depth>DepthMenu-</depth>

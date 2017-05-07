@@ -1,3 +1,17 @@
+[B]3.0.52[/B]
+- Added icon-fonts
+- Added install-option & fallback-icon to all add-on shortcuts
+- Added 5 custom-path options to home-widgets (except weather & programs)
+- Added onscreen swidget
+- Added appropriate onclick-actions to weather- & program-widgets
+- Added a section to skinsettings to manage widget-content
+- Added preset 7 clear-option to widget- & addon shortcuts-section in skinsettings
+- Added custom_overlay and grids (Debug, Layout & Phi)
+- Added smartplaylists for movies, episodes, musicvideos & music
+- Added "Swidgets" (that's right: you read it first here, lol) for fast & easy switching of widget content
+- Added skin-settings to bootmenu
+- Edited weather-layout to accomodate weather widgets' onclick-actions
+
 [B]3.0.51[/B]
 - Added "Music videos"-button to Home
 - Added widgets to all HomeItems
