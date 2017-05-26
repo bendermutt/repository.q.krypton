@@ -341,8 +341,8 @@
 						<bordersize>12</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<animation reversible="false" effect="zoom" start="-3,24,168,168" end="-18,-6,198,198" time="150">focus</animation>
-						<animation reversible="false" effect="zoom" end="-3,24,168,168" start="-18,-6,198,198" time="150">unfocus</animation>
+						<animation reversible="false" effect="zoom" start="-3,24,252,252" end="-18,-6,297,297" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="-3,24,252,252" start="-18,-6,297,297" time="150">unfocus</animation>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>

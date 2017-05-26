@@ -157,6 +157,13 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>-</icon>
 					</item>
+					<item id="8">
+						<visible>System.Platform.Android</visible>
+						<label>Android</label>
+						<label2>Android $LOCALIZE[5]</label2>
+						<onclick>ActivateWindow(1100)</onclick>
+						<icon>-</icon>
+					</item>
 				</content>
 			</control>
 			<control type="image">

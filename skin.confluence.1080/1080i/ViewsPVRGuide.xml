@@ -20,7 +20,7 @@
 				<left>120</left>
 				<top>106</top>
 				<width>1658</width>
-				<height>628</height>
+				<height>850</height>
 				<onleft>101</onleft>
 				<onright>60</onright>
 				<onup>10</onup>
@@ -217,7 +217,7 @@
 				<left>1782</left>
 				<top>156</top>
 				<width>38</width>
-				<height>582</height>
+				<height>804</height>
 				<texturesliderbackground border="0,21,0,21">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,21,0,21">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,21,0,21">ScrollBarV_bar_focus.png</texturesliderbarfocus>

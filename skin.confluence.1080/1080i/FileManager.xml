@@ -170,6 +170,7 @@
 						<textcolor>white</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<onclick condition="SubString(ListItem.FileNameAndPath,.xml">RunScript(script.extendedinfo,info=viewtext,file=$ESCINFO[ListItem.FileNameAndPath])</onclick>
 					</control>
 					<control type="label">
 						<left>495</left>

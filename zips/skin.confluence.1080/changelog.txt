@@ -1,3 +1,9 @@
+[B]3.0.53[/B]
+- Added android settings in system settings, leads to custom android settings window (1100)
+- Edited textviewer: larger size and smaller font
+- Fixed posterwrapviews in music and video nav
+- Fixed PVRView
+
 [B]3.0.52[/B]
 - Added icon-fonts
 - Added install-option & fallback-icon to all add-on shortcuts
