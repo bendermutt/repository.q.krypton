@@ -1,3 +1,10 @@
+[B]3.0.54[/B]
+- Added TotalPlayerInfo-setting (in skinsettings). If enabled, the DialogPlayerProcessInfo-window toggles PlayerDebug onload and unload. The ProcessInfo is moved half a screen to the right for better visibility of the PlayerDebug-info.
+- Changed position of swidgets on VideosHomeItem so it is more obvious which widget they control
+- Corrected swidgets numbering and conditional visibility
+- Fixed missing label2 in widgets. Pictures (Size), TVShows (TVShowTitle), Music (Artist), Musicvideos (Artist), TV (Plot) and Radio (Plot)
+- Switched movie and tvshow widget position on Videos-HomeMenuItem so it corresponds with the default confluence icon.
+
 [B]3.0.53[/B]
 - Added android settings in system settings, leads to custom android settings window (1100)
 - Edited textviewer: larger size and smaller font

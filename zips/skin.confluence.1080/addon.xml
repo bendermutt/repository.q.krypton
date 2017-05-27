@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.confluence.1080" version="3.0.53" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
+<addon id="skin.confluence.1080" version="3.0.54" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 	</requires>
@@ -148,6 +148,6 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
-		<news>Added icon-fonts \ Added install-option &amp; fallback-icon to all add-on shortcuts \ Added 5 custom-path options to home-widgets (except weather &amp; programs) \ Added onscreen swidget \ Added appropriate onclick-actions to weather- &amp; program-widgets \ Added a section to skinsettings to manage widget-content \ Added preset 7 clear-option to widget- &amp; addon shortcuts-section in skinsettings \ Added custom_overlay and grids (Debug, Layout &amp; Phi) \ Added smartplaylists for movies, episodes, musicvideos &amp; music \ Added &quot;Swidgets&quot; (that's right, you read it first here) for fast &amp; easy switching of widget content \ Added skin-settings to bootmenu \ Edited weather-layout to accomodate weather widgets&apos; onclick-actions</news>
+		<news>Added TotalPlayerInfo-setting (in skinsettings). If enabled, the DialogPlayerProcessInfo-window toggles PlayerDebug onload and unload. The ProcessInfo is moved half a screen to the right for better visibility of the PlayerDebug-info \ Changed position of swidgets on VideosHomeItem so it is more obvious which widget they control \ Corrected swidgets numbering and conditional visibility \ Fixed missing label2 in widgets. Pictures (Size), TVShows (TVShowTitle), Music (Artist), Musicvideos (Artist), TV (Plot) and Radio (Plot) \ Switched movie and tvshow widget position on Videos-HomeMenuItem so it corresponds with the default confluence icon</news>
 	</extension>
 </addon>
