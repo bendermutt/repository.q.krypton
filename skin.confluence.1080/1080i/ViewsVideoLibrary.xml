@@ -728,7 +728,7 @@
 					<left>0</left>
 					<top>48</top>
 					<width>1275</width>
-					<height>147</height>
+					<height>250</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -1744,7 +1744,7 @@
 					<left>15</left>
 					<top>648</top>
 					<width>810</width>
-					<height>147</height>
+					<height>220</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>

@@ -326,7 +326,7 @@
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>5</label>
-				<visible>Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+				<visible>Skin.HasSetting(HomeMenuNoSystemButton)</visible>
 			</control>
 			<control type="image" id="17">
 				<description>background bottom image</description>

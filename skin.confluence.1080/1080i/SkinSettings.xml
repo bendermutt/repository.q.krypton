@@ -525,8 +525,8 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20342]</label>
 						<label2>    [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]      </label2>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(Movies)</enable>
@@ -541,8 +541,8 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20343]</label>
 						<label2>    [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]      </label2>
-						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
@@ -557,8 +557,8 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20389]</label>
 						<label2>    [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]      </label2>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMusicVideoButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideosButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMusicVideosButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -584,9 +584,38 @@
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
-						<label2>    [COLOR=grey3]($LOCALIZE[1223]? $LOCALIZE[5] $LOCALIZE[1405] $LOCALIZE[33060]-$LOCALIZE[33061])[/COLOR]      </label2>
+						<label2></label2>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="231">
+						<description>Hide Disc Button</description>
+						<visible>System.HasMediaDVD</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[341]</label>
+						<label2>    [COLOR=grey3]($LOCALIZE[218])[/COLOR]      </label2>
+						<onclick>Skin.ToggleSetting(HomeMenuNoDiscButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoDiscButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="232">
+						<description>Hide System Button</description>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[13000]</label>
+						<label2>    [COLOR=grey3]($LOCALIZE[1223]? $LOCALIZE[5] $LOCALIZE[1405] $LOCALIZE[33060]-$LOCALIZE[33061])[/COLOR]      </label2>
+						<onclick>Skin.ToggleSetting(HomeMenuNoSystemButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoSystemButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -748,9 +777,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[31132]</label>
-							<label2></label2>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+							<label>$LOCALIZE[31132] $INFO[system.addontitle(Skin.String(LyricScript_Path)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -787,8 +815,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -800,8 +828,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -813,8 +841,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -826,8 +854,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -839,8 +867,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -852,8 +880,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -865,8 +893,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeWeatherButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeWeatherButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeWeatherButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -927,8 +955,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -940,8 +968,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -953,8 +981,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -966,8 +994,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -979,8 +1007,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -992,8 +1020,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1005,8 +1033,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomePicturesButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomePicturesButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomePicturesButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1069,8 +1097,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1083,8 +1111,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1097,8 +1125,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1111,8 +1139,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1125,8 +1153,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1139,8 +1167,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1153,8 +1181,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeRadioButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeRadioButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeRadioButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1162,7 +1190,7 @@
 							<onclick>Skin.SetAddon(HomeRadioButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
 							<control type="button" id="438">
-							<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoRadioButton) + PVR.HasRadioChannels</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1181,7 +1209,7 @@
 							<onclick>Skin.SetString(HomeRadioButton7,plugin.audio.ramfm)</onclick>
 						</control>
 						<control type="button" id="439">
-							<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoRadioButton) + PVR.HasRadioChannels</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1217,8 +1245,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeTVButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1231,8 +1259,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeTVButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1245,8 +1273,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeTVButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1259,8 +1287,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeTVButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1273,8 +1301,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeTVButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1287,8 +1315,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeTVButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1301,8 +1329,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeTVButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1310,7 +1338,7 @@
 							<onclick>Skin.SetAddon(HomeTVButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
 							<control type="button" id="448">
-							<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoTVButton) + PVR.HasTVChannels</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1329,7 +1357,7 @@
 							<onclick>Skin.SetString(HomeTVButton7,plugin.video.spiegel_tv)</onclick>
 						</control>
 						<control type="button" id="449">
-							<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoTVButton) + PVR.HasTVChannels</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1363,8 +1391,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1376,8 +1404,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1389,8 +1417,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1402,8 +1430,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1415,8 +1443,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1428,8 +1456,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1441,8 +1469,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeVideosButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeVideosButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1505,8 +1533,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1519,8 +1547,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1533,8 +1561,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1547,8 +1575,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1561,8 +1589,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1575,8 +1603,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1589,8 +1617,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMoviesButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeMoviesButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMoviesButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1598,7 +1626,7 @@
 							<onclick>Skin.SetAddon(HomeMoviesButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
 							<control type="button" id="468">
-							<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1617,7 +1645,7 @@
 							<onclick>Skin.SetString(HomeMoviesButton7,plugin.video.snagfilms)</onclick>
 						</control>
 						<control type="button" id="469">
-							<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1653,8 +1681,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1667,8 +1695,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1681,8 +1709,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1695,8 +1723,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1709,8 +1737,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1723,8 +1751,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1737,8 +1765,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeTVShowsButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeTVShowsButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeTVShowsButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1746,7 +1774,7 @@
 							<onclick>Skin.SetAddon(HomeTVShowsButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
 							<control type="button" id="478">
-							<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1765,7 +1793,7 @@
 							<onclick>Skin.SetString(HomeTVShowsButton7,plugin.video.travel)</onclick>
 						</control>
 						<control type="button" id="479">
-							<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1801,8 +1829,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1815,8 +1843,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1829,8 +1857,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1843,8 +1871,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1857,8 +1885,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1871,8 +1899,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1885,8 +1913,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicVideosButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeMusicVideosButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicVideosButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1894,7 +1922,7 @@
 							<onclick>Skin.SetAddon(HomeMusicVideosButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
 							<control type="button" id="488">
-							<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton) + Library.HasContent(MusicVideos)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1913,7 +1941,7 @@
 							<onclick>Skin.SetString(HomeMusicVideosButton7,plugin.video.worldstarhiphop)</onclick>
 						</control>
 						<control type="button" id="489">
-							<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton) + Library.HasContent(MusicVideos)</visible>
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
@@ -1947,8 +1975,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1960,8 +1988,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1973,8 +2001,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1986,8 +2014,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -1999,8 +2027,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2012,8 +2040,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2025,8 +2053,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeMusicButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeMusicButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2085,8 +2113,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]1[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton1))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]1[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton1)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton1)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2097,8 +2125,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]2[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton2))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]2[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton2)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton2)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2109,8 +2137,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]3[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton3))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]3[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton3)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton3)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2121,8 +2149,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]4[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton4))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]4[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton4)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton4)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2133,8 +2161,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]5[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton5))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]5[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton5)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton5)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2145,8 +2173,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]6[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton6))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]6[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton6)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton6)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2157,8 +2185,8 @@
 							<width>1125</width>
 							<height>60</height>
 							<font>font13</font>
-							<label>$LOCALIZE[24000] [B]7[/B]</label>
-							<label2>    [COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramsButton7))][/COLOR]</label2>
+							<label>$LOCALIZE[24000] [B]7[/B] $INFO[system.addontitle(Skin.String(HomeProgramsButton7)),- , -]</label>
+							<label2>    [COLOR=selected]$INFO[Skin.String(HomeProgramsButton7)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
@@ -2325,15 +2353,15 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomePicturesPath1,special://xbmc/addons/skin.estouchy/background)</onclick>
+						<onclick>Skin.SetString(HomePicturesPath1,special://xbmc/addons/skin.estouchy/background/)</onclick>
 						<onclick>Skin.SetString(HomePicturesPath1.Label,$INFO[System.AddonTitle(skin.estouchy)] $LOCALIZE[33069])</onclick>
-						<onclick>Skin.SetString(HomePicturesPath2,special://xbmc/addons/skin.estuary/extras/backgrounds)</onclick>
+						<onclick>Skin.SetString(HomePicturesPath2,special://xbmc/addons/skin.estuary/extras/backgrounds/)</onclick>
 						<onclick>Skin.SetString(HomePicturesPath2.Label,$INFO[System.AddonTitle(skin.estuary)] $LOCALIZE[33069])</onclick>
-						<onclick>Skin.SetString(HomePicturesPath3,special://xbmc/addons/webinterface.default/images/fanart_default)</onclick>
+						<onclick>Skin.SetString(HomePicturesPath3,special://xbmc/addons/webinterface.default/images/fanart_default/)</onclick>
 						<onclick>Skin.SetString(HomePicturesPath3.Label,Chorus2 $LOCALIZE[20445])</onclick>
-						<onclick>Skin.SetString(HomePicturesPath4,special://xbmc/media)</onclick>
+						<onclick>Skin.SetString(HomePicturesPath4,special://xbmc/media/)</onclick>
 						<onclick>Skin.SetString(HomePicturesPath4.Label,Kodi $LOCALIZE[409] $LOCALIZE[10002])</onclick>
-						<onclick>Skin.SetString(HomePicturesPath5,special://profile/Thumbnails/0)</onclick>
+						<onclick>Skin.SetString(HomePicturesPath5,special://profile/Thumbnails/0/)</onclick>
 						<onclick>Skin.SetString(HomePicturesPath5.Label,$LOCALIZE[439] - $LOCALIZE[20334] &quot;$LOCALIZE[12310]&quot;)</onclick>
 					</control>
 					<control type="button" id="617">
@@ -2617,7 +2645,7 @@
 						<onclick>Skin.Reset(HomeTVPath5.Label)</onclick>
 					</control>
 					<control type="label" id="640">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>68</height>
 						<font>font13_title</font>
@@ -2628,7 +2656,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="button" id="641">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2642,7 +2670,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath1.Label)</onclick>
 					</control>
 					<control type="button" id="642">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2656,7 +2684,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath2.Label)</onclick>
 					</control>
 					<control type="button" id="643">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2670,7 +2698,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath3.Label)</onclick>
 					</control>
 					<control type="button" id="644">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2684,7 +2712,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath4.Label)</onclick>
 					</control>
 					<control type="button" id="645">
-						<visible>![Skin.HasSetting(HomeMenuNoMovieButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2698,7 +2726,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath5.Label)</onclick>
 					</control>
 					<control type="button" id="646">
-						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2720,7 +2748,7 @@
 						<onclick>Skin.SetString(HomeMoviesPath5.Label,$LOCALIZE[16101])</onclick>
 					</control>
 					<control type="button" id="647">
-						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoMoviesButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2744,7 +2772,7 @@
 						<onclick>Skin.Reset(HomeMoviesPath5.Label)</onclick>
 					</control>
 					<control type="label" id="650">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>68</height>
 						<font>font13_title</font>
@@ -2755,7 +2783,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="button" id="651">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font> 
@@ -2769,7 +2797,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath1.Label)</onclick>
 					</control>
 					<control type="button" id="652">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2783,7 +2811,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath2.Label)</onclick>
 					</control>
 					<control type="button" id="653">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2797,7 +2825,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath3.Label)</onclick>
 					</control>
 					<control type="button" id="654">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2811,7 +2839,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath4.Label)</onclick>
 					</control>
 					<control type="button" id="655">
-						<visible>![Skin.HasSetting(HomeMenuNoTVShowButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2825,7 +2853,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath5.Label)</onclick>
 					</control>
 					<control type="button" id="656">
-						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2847,7 +2875,7 @@
 						<onclick>Skin.SetString(HomeTVShowsPath5.Label,$LOCALIZE[16101])</onclick>
 					</control>
 					<control type="button" id="657">
-						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+						<visible>![Skin.HasSetting(HomeMenuNoTVShowsButton) + Skin.HasSetting(HomeMenuNoVideosButton)]</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2871,7 +2899,7 @@
 						<onclick>Skin.Reset(HomeTVShowsPath5.Label)</onclick>
 					</control>
 					<control type="label" id="660">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>68</height>
 						<font>font13_title</font>
@@ -2882,7 +2910,7 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="button" id="661">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2896,7 +2924,7 @@
 						<onclick>Skin.SetString(HomeMusicVideosPath1.Label)</onclick>
 					</control>
 					<control type="button" id="662">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2910,7 +2938,7 @@
 						<onclick>Skin.SetString(HomeMusicVideosPath2.Label)</onclick>
 					</control>
 					<control type="button" id="663">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2924,7 +2952,7 @@
 						<onclick>Skin.SetString(HomeMusicVideosPath3.Label)</onclick>
 					</control>
 					<control type="button" id="664">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -2938,7 +2966,7 @@
 						<onclick>Skin.SetString(HomeMusicVideosPath4.Label)</onclick>
 					</control>
 					<control type="button" id="665">
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
@@ -3123,6 +3151,133 @@
 						<onclick>Skin.Reset(HomeMusicPath4.Label)</onclick>
 						<onclick>Skin.Reset(HomeMusicPath5)</onclick>
 						<onclick>Skin.Reset(HomeMusicPath5.Label)</onclick>
+					</control>
+					<control type="label" id="680">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>68</height>
+						<font>font13_title</font>
+						<label>$LOCALIZE[10000] - $LOCALIZE[10001] - $LOCALIZE[636]</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="681">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[573] 1[COLOR=grey3]$INFO[Skin.String(HomeProgramsPath1), - , - ][/COLOR]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeProgramsPath1.Label)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(HomeProgramsPath1,addons://user/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath1.Label)</onclick>
+					</control>
+					<control type="button" id="682">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[573] 2[COLOR=grey3]$INFO[Skin.String(HomeProgramsPath2), - , - ][/COLOR]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeProgramsPath2.Label)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(HomeProgramsPath2,addons://user/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath2.Label)</onclick>
+					</control>
+					<control type="button" id="683">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[573] 3[COLOR=grey3]$INFO[Skin.String(HomeProgramsPath3), - , - ][/COLOR]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeProgramsPath3.Label)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(HomeProgramsPath3,addons://user/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath3.Label)</onclick>
+					</control>
+					<control type="button" id="684">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[573] 4[COLOR=grey3]$INFO[Skin.String(HomeProgramsPath4), - , - ][/COLOR]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeProgramsPath4.Label)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(HomeProgramsPath4,addons://user/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath4.Label)</onclick>
+					</control>
+					<control type="button" id="685">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[573] 5[COLOR=grey3]$INFO[Skin.String(HomeProgramsPath5), - , - ][/COLOR]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeProgramsPath5.Label)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(HomeProgramsPath5,addons://user/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath5.Label)</onclick>
+					</control>
+					<control type="button" id="686">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13388]</label>
+						<label2></label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(HomeProgramsPath1,addons://sources/audio/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath1.Label,$LOCALIZE[1038])</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath2,addons://sources/executable/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath2.Label,$LOCALIZE[1043])</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath3,addons://sources/image/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath3.Label,$LOCALIZE[1039])</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath4,addons://running/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath4.Label,$LOCALIZE[24994])</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath5,addons://dependencies/)</onclick>
+						<onclick>Skin.SetString(HomeProgramsPath5.Label,$LOCALIZE[24996])</onclick>
+					</control>
+					<control type="button" id="687">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[192]: $LOCALIZE[10001] - $LOCALIZE[593]</label>
+						<label2></label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.Reset(HomeProgramsPath)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath.Label)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath1)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath1.Label)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath2)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath2.Label)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath3)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath3.Label)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath4)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath4.Label)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath5)</onclick>
+						<onclick>Skin.Reset(HomeProgramsPath5.Label)</onclick>
 					</control>
 				</control>
 				<control type="scrollbar" id="60">

@@ -7,4 +7,5 @@
 		<value>1</value>
 	</rule>
 	<order direction="descending">lastplayed</order>
+	<limit>20</limit>
 </smartplaylist>

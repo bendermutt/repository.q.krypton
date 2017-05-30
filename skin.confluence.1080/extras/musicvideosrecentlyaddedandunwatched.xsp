@@ -6,4 +6,5 @@
 		<value>1</value>
 	</rule>
 	<order direction="descending">dateadded</order>
+	<limit>20</limit>
 </smartplaylist>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus | ControlGroup(9018).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
 	<controls>
-		<control type="list" id="90160">
+		<control type="list" id="90100">
 			<left>-15</left>
 			<top>-15</top>
 			<width>1</width>
@@ -14,30 +14,8 @@
 			<viewtype label="535">list</viewtype>
 			<itemlayout height="1" width="1"></itemlayout>
 			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="6">library://video/movies/</content>
-			<visible>Library.HasContent(Movies)</visible>
-		</control>
-		<control type="list" id="90170">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="6">library://video/tvshows/</content>
-			<visible>Library.HasContent(TVShows)</visible>
-		</control>
-		<control type="list" id="90180">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="music" limit="6">library://video/musicvideos/</content>
-			<visible>Library.HasContent(MusicVideos)</visible>
+			<content target="video" limit="10">library://video/</content>
+			<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 		</control>
 		<control type="list" id="90110">
 			<left>-15</left>
@@ -47,8 +25,52 @@
 			<viewtype label="535">list</viewtype>
 			<itemlayout height="1" width="1"></itemlayout>
 			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="music" limit="6">library://music/</content>
-			<visible>Library.HasContent(Music)</visible>
+			<content target="music" limit="10">library://music/</content>
+			<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+		</control>
+		<control type="list" id="90120">
+			<left>-15</left>
+			<top>-15</top>
+			<width>1</width>
+			<height>1</height>
+			<viewtype label="535">list</viewtype>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="1" width="1"></focusedlayout>
+			<content target="addonbrowser" limit="10">addons://</content>
+			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+		</control>
+		<control type="list" id="90160">
+			<left>-15</left>
+			<top>-15</top>
+			<width>1</width>
+			<height>1</height>
+			<viewtype label="535">list</viewtype>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="1" width="1"></focusedlayout>
+			<content target="video" limit="10">library://video/movies/</content>
+			<visible>Library.HasContent(Movies) + !Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</control>
+		<control type="list" id="90170">
+			<left>-15</left>
+			<top>-15</top>
+			<width>1</width>
+			<height>1</height>
+			<viewtype label="535">list</viewtype>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="1" width="1"></focusedlayout>
+			<content target="video" limit="10">library://video/tvshows/</content>
+			<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+		</control>
+		<control type="list" id="90180">
+			<left>-15</left>
+			<top>-15</top>
+			<width>1</width>
+			<height>1</height>
+			<viewtype label="535">list</viewtype>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="1" width="1"></focusedlayout>
+			<content target="video" limit="10">library://video/musicvideos/</content>
+			<visible>Library.HasContent(MusicVideos) + !Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
 		</control>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -833,7 +855,7 @@
 					<onright>9012</onright>
 					<visible>Container(9000).HasFocus(1)</visible>
 					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuSystem</include>
+					<include>HomeSubMenuPrograms</include>
 				</control>
 				<control type="grouplist" id="9013">
 					<include>HomeSubMenuCommonValues</include>
@@ -847,30 +869,38 @@
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9014</onleft>
 					<onright>9014</onright>
-					<visible>Container(9000).HasFocus(12)</visible>
-					<!-- Buttons for the grouplist -->
-					<include>HomeSubMenuTV</include>
-				</control>
-				<control type="grouplist" id="9015">
-					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
 					<visible>Container(9000).HasFocus(4)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuPictures</include>
 				</control>
-				<control type="grouplist" id="9016">
+				<control type="grouplist" id="9015">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9014</onleft>
-					<onright>9014</onright>
+					<onleft>9015</onleft>
+					<onright>9015</onright>
+					<visible>Container(9000).HasFocus(5)</visible>
+					<!-- Buttons for the grouplist -->
+					<include>HomeSubMenuSystem</include>
+				</control>
+				<control type="grouplist" id="9019">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9019</onleft>
+					<onright>9019</onright>
+					<visible>Container(9000).HasFocus(12)</visible>
+					<!-- Buttons for the grouplist -->
+					<include>HomeSubMenuTV</include>
+				</control>
+				<control type="grouplist" id="9020">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9020</onleft>
+					<onright>9020</onright>
 					<visible>Container(9000).HasFocus(13)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuRadio</include>
 				</control>
 				<control type="grouplist" id="9018">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9014</onleft>
-					<onright>9014</onright>
+					<onleft>9018</onleft>
+					<onright>9018</onright>
 					<visible>Container(9000).HasFocus(14)</visible>
 					<!-- Buttons for the grouplist -->
 					<include>HomeSubMenuMusicVideos</include>
@@ -891,9 +921,9 @@
 				<texture>HomeOverlay1.png</texture>
 			</control>
 			<control type="fixedlist" id="9000">
-				<left>-165</left>
+				<left>-290</left>
 				<top>8</top>
-				<width>2250</width>
+				<width>2350</width>
 				<height>90</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
@@ -905,8 +935,8 @@
 				<focusposition>2</focusposition>
 				<movement>1</movement>
 				<orientation>Horizontal</orientation>
-				<itemlayout height="90" width="450">
-					<control type="image">
+				<itemlayout height="90" width="500">
+					<!--<control type="image">
 						<left>0</left>
 						<top>6</top>
 						<width>1</width>
@@ -914,16 +944,16 @@
 						<texture>HomeSeperator.png</texture>
 					</control>
 					<control type="image">
-						<left>448</left>
+						<left>498</left>
 						<top>6</top>
 						<width>1</width>
 						<height>78</height>
 						<texture>HomeSeperator.png</texture>
-					</control>
+					</control>-->
 					<control type="label">
 						<left>8</left>
 						<top>0</top>
-						<width>435</width>
+						<width>485</width>
 						<height>90</height>
 						<font>font_MainMenu</font>
 						<textcolor>grey3</textcolor>
@@ -932,8 +962,8 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="90" width="450">
-					<control type="image">
+				<focusedlayout height="90" width="500">
+					<!--<control type="image">
 						<left>0</left>
 						<top>6</top>
 						<width>1</width>
@@ -941,16 +971,16 @@
 						<texture>HomeSeperator.png</texture>
 					</control>
 					<control type="image">
-						<left>448</left>
+						<left>498</left>
 						<top>6</top>
 						<width>1</width>
 						<height>78</height>
 						<texture>HomeSeperator.png</texture>
-					</control>
+					</control>-->
 					<control type="label">
 						<left>8</left>
 						<top>0</top>
-						<width>435</width>
+						<width>485</width>
 						<height>90</height>
 						<font>font_MainMenu</font>
 						<textcolor>grey3</textcolor>
@@ -961,7 +991,7 @@
 					<control type="label">
 						<left>8</left>
 						<top>0</top>
-						<width>435</width>
+						<width>485</width>
 						<height>90</height>
 						<font>font_MainMenu</font>
 						<textcolor>blue</textcolor>
@@ -974,7 +1004,7 @@
 				</focusedlayout>
 				<content>
 					<item id="7">
-						<label>31950</label>
+						<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 						<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
 						<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 						<icon>-</icon>
@@ -982,28 +1012,28 @@
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 					</item>
 					<item id="4">
-						<label>31951</label>
+						<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 						<onclick>ActivateWindow(Pictures)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
 					<item id="13">
-						<label>31960</label>
+						<label>[UPPERCASE]$LOCALIZE[19021][/UPPERCASE]</label>
 						<onclick>ActivateWindow(RadioChannels)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoRadioButton) + PVR.HasRadioChannels</visible>
 					</item>
 					<item id="12">
-						<label>31952</label>
+						<label>[UPPERCASE]$LOCALIZE[19020][/UPPERCASE]</label>
 						<onclick>ActivateWindow(TVChannels)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoTVButton) + PVR.HasTVChannels</visible>
 					</item>
 					<item id="2">
-						<label>31953</label>
+						<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
 						<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
 						<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
 						<icon>-</icon>
@@ -1011,28 +1041,28 @@
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
 					<item id="10">
-						<label>31954</label>
+						<label>[UPPERCASE]$LOCALIZE[20342][/UPPERCASE]</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
-						<label>31955</label>
+						<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
 						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="14">
 						<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + Library.HasContent(MusicVideos)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton) + Library.HasContent(MusicVideos)</visible>
 					</item>
 					<item id="3">
-						<label>31956</label>
+						<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
 						<onclick condition="String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music)</onclick>
 						<onclick condition="!String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music,root)</onclick>
 						<icon>-</icon>
@@ -1040,7 +1070,7 @@
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
 					<item id="1">
-						<label>31957</label>
+						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
 						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
 						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
 						<icon>-</icon>
@@ -1048,18 +1078,19 @@
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
 					<item id="6">
-						<label>31958</label>
+						<label>[UPPERCASE]$LOCALIZE[341][/UPPERCASE]</label>
 						<onclick>PlayDVD()</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>System.HasMediaDVD</visible>
+						<visible>System.HasMediaDVD + !Skin.HasSetting(HomeMenuNoDiscButton)</visible>
 					</item>
-					<!--<item id="5">
-						<label>31959</label>
+					<item id="5">
+						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
 						<onclick>ActivateWindow(Settings)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-					</item>-->
+						<visible>!Skin.HasSetting(HomeMenuNoSystemButton)</visible>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -1081,18 +1112,6 @@
 			<depth>DepthMenu</depth>
 			<onup>9001</onup>
 			<ondown>20</ondown>
-			<control type="fixedlist" id="700">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4) | String.IsEqual(Container(700).NumItems,6)">conditional</animation>
-				<visible>Container(9000).HasFocus(7)</visible>
-				<onleft>700</onleft>
-				<onright>700</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
-				<include>HomeAddonsCommonLayout</include>
-				<content>
-					<include>HomeAddonItemsWeather</include>
-				</content>
-			</control>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4) | String.IsEqual(Container(700).NumItems,6)">conditional</animation>
 				<visible>Container(9000).HasFocus(7)</visible>

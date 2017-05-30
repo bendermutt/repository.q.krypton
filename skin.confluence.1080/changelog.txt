@@ -1,3 +1,24 @@
+[B]3.0.55[/B]
+- Added AddonName to Label in Add-on Shortcuts section
+- Added custom onclick action for ProgramsWidget (RunAddon)
+- Added custom submenu for Programs using root AddonBrowser entries
+- Added ProgramsWidget (addon-sections)
+- Added quantity indicator for widgets
+- Added slash-suffix to all preset-paths in PictureWidget
+- Added some height to plot-space in LibraryViews
+- Added UpdateLocalAddons and UpdateAddonRepos to AddonBrowser onload
+- Changed Label for NetworkItem in SystemWidget, now shows ip when network connected
+- Changed Label2 (AddonName to AddonID) for Add-on Shortcuts section in skinsettings
+- Changed order of items in SystemWidget
+- Changed the localized strings used for MainMenuItems and added UPPERCASE
+- Edited Next-Arrows to be visible if input.enablemouse = True
+- Fixed Label and Label2 for Lyrics script
+- Fixed onclick action for MusicWidget default content
+- Moved System-submenu back from Programs to System
+- Re-introduced System-HomeItem
+- Removed MainMenu seperators
+- Shortened labelwidth for submenu so text does not overlap
+
 [B]3.0.54[/B]
 - Added TotalPlayerInfo-setting (in skinsettings). If enabled, the DialogPlayerProcessInfo-window toggles PlayerDebug onload and unload. The ProcessInfo is moved half a screen to the right for better visibility of the PlayerDebug-info.
 - Changed position of swidgets on VideosHomeItem so it is more obvious which widget they control

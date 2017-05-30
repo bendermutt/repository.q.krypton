@@ -4,4 +4,5 @@
 	<match>all</match>
 	<rule field="inprogress" operator="true" />
 	<order direction="descending">lastplayed</order>
+	<limit>20</limit>
 </smartplaylist>

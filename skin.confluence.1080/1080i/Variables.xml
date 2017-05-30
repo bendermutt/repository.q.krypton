@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- VARIABLES -->
-	<variable name="PicturesWidgetContent">
-
-	</variable>
 	<variable name="ShortCuts">
 		<value condition="Skin.HasSetting(SuperShortCuts)">special://home/addons/plugin.program.super.favourites/chooser.py,changetitle=true&amp;property=</value>
 		<value>script.favourites,changetitle=true&amp;property=</value>
@@ -124,8 +121,22 @@
 		<value condition="Skin.String(HomeMusicPath,5)">$INFO[Skin.String(HomeMusicPath5.Label)]</value>
 		<value>$LOCALIZE[359]</value>
 	</variable>
-
-
+	<variable name="ProgramsWidgetContent">
+		<value condition="Skin.String(HomeProgramsPath,1)">$INFO[Skin.String(HomeProgramsPath1)]</value>
+		<value condition="Skin.String(HomeProgramsPath,2)">$INFO[Skin.String(HomeProgramsPath2)]</value>
+		<value condition="Skin.String(HomeProgramsPath,3)">$INFO[Skin.String(HomeProgramsPath3)]</value>
+		<value condition="Skin.String(HomeProgramsPath,4)">$INFO[Skin.String(HomeProgramsPath4)]</value>
+		<value condition="Skin.String(HomeProgramsPath,5)">$INFO[Skin.String(HomeProgramsPath5)]</value>
+		<value>addons://sources/video/</value>
+	</variable>
+	<variable name="ProgramsWidgetLabel">
+		<value condition="Skin.String(HomeProgramsPath,1)">$INFO[Skin.String(HomeProgramsPath1.Label)]</value>
+		<value condition="Skin.String(HomeProgramsPath,2)">$INFO[Skin.String(HomeProgramsPath2.Label)]</value>
+		<value condition="Skin.String(HomeProgramsPath,3)">$INFO[Skin.String(HomeProgramsPath3.Label)]</value>
+		<value condition="Skin.String(HomeProgramsPath,4)">$INFO[Skin.String(HomeProgramsPath4.Label)]</value>
+		<value condition="Skin.String(HomeProgramsPath,5)">$INFO[Skin.String(HomeProgramsPath5.Label)]</value>
+		<value>$LOCALIZE[1037]</value>
+	</variable>
 	<variable name="AddonLabel2">
 		<value condition="!String.IsEmpty(ListItem.Property(Addon.Status))">$INFO[ListItem.Property(Addon.Status)]</value>
 		<value condition="!String.IsEmpty(ListItem.AddonSize)">$INFO[ListItem.AddonSize]</value>
