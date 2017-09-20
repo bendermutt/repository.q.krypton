@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.confluence.1080" version="3.0.55" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
+<addon id="skin.confluence.1080" version="3.0.56" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 	</requires>
@@ -148,6 +148,6 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
-		<news>Added AddonName to Label in Add-on Shortcuts section \ Added custom onclick action for ProgramsWidget (RunAddon) \ Added custom submenu for Programs using root AddonBrowser entries \ Added ProgramsWidget (addon-sections) \ Added quantity indicator for widgets \ Added slash-suffix to all preset-paths in PictureWidget \ Added some height to plot-space in LibraryViews \ Added UpdateLocalAddons and UpdateAddonRepos to AddonBrowser onload \ Changed Label for NetworkItem in SystemWidget, now shows ip when network connected \ Changed Label2 (AddonName to AddonID) for Add-on Shortcuts section in skinsettings \ Changed order of items in SystemWidget \ Changed the localized strings used for MainMenuItems and added UPPERCASE \ Edited Next-Arrows to be visible if input.enablemouse is True \ Fixed Label and Label2 for Lyrics script \ Fixed onclick action for MusicWidget default content \ Moved System-submenu back from Programs to System \ Re-introduced System-HomeItem \ Removed MainMenu seperators \ Shortened labelwidth for submenu so text does not overlap</news>
+		<news>Added two mainmenu positions: "high" and "low" / Changed label "system" to "settings" / Changed position of title for Videos-widget to avoid it overlapping now playing info / Changed weather, pictures, programs and settings widget, they can now be dis- or enabled seperately / Changed layout of MusicInfo from 2 rows to three / Removed DefaultAlbumCover.png from MusicInfo</news>
 	</extension>
 </addon>

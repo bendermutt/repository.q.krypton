@@ -254,10 +254,16 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-#empty strings with id 31113 to 31114
+msgctxt "#31113"
+msgid "Show weather widget"
+msgstr ""
+
+msgctxt "#31114"
+msgid "Show pictures widget"
+msgstr ""
 
 msgctxt "#31115"
-msgid "Show miscellaneous widgets"
+msgid "Show programs widget"
 msgstr ""
 
 msgctxt "#31116"
@@ -277,7 +283,11 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr ""
 
-#empty strings from id 31120 to 31121
+msgctxt "#31120"
+msgid "Show settings widget"
+msgstr ""
+
+#empty string with id 31121
 
 #. Boolean settings value
 #: system/settings/settings.xml

@@ -169,7 +169,7 @@
 					<texture>separator.png</texture>
 					<visible>String.IsEqual(ListItem.DBTYPE,song)</visible>
 				</control>
-				<control type="image">
+<!--				<control type="image">
 					<description>Thumb</description>
 					<left>315</left>
 					<top>780</top>
@@ -177,10 +177,10 @@
 					<height>180</height>
 					<texture>$VAR[MusicInfoListThumb]</texture>
 					<aspectratio>keep</aspectratio>
-				</control>
+				</control>-->
 				<include content="MusicInfoPanel" condition="String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)">
-					<param name="panel-left" value="340" />
-					<param name="panel-width" value="900" />
+					<param name="panel-left" value="315" />
+					<param name="panel-width" value="1350" />
 					<param name="item-width" value="450" />
 					<param name="label-width" value="430" />
 				</include>

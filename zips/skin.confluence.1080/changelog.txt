@@ -1,3 +1,11 @@
+[B]3.0.56[/B]
+- Added two mainmenu positions: "high" and "low"
+- Changed label "system" to "settings"
+- Changed position of title for Videos-widget to avoid it overlapping now playing info.
+- Changed weather, pictures, programs and settings widget, they can now be dis/enabled seperately
+- Changed layout of MusicInfo from 2 rows to three
+- Removed DefaultAlbumCover.png from MusicInfo
+
 [B]3.0.55[/B]
 - Added AddonName to Label in Add-on Shortcuts section
 - Added custom onclick action for ProgramsWidget (RunAddon)

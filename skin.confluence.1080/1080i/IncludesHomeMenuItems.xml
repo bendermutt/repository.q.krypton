@@ -322,38 +322,43 @@
 		</control>
 		<control type="button" id="901201">
 			<include>ButtonHomeSubCommonValues</include>
+			<label>$LOCALIZE[166] $LOCALIZE[1390]</label>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+		</control>
+		<control type="button" id="901202">
+			<include>ButtonHomeSubCommonValues</include>
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</control>
-		<control type="button" id="901202">
+		<control type="button" id="901203">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>13200</label>
 			<onclick>ActivateWindow(Profiles)</onclick>
 		</control>
-		<control type="button" id="901203">
+		<control type="button" id="901204">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
 		</control>
-		<control type="button" id="901204">
+		<control type="button" id="901205">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>14111</label>
 			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
 			<visible>system.getbool(eventlog.enabled)</visible>
 		</control>
-		<control type="button" id="901205">
+		<control type="button" id="901206">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>LibreELEC</label>
 			<onclick>RunAddon(service.libreelec.settings)</onclick>
 			<visible>System.HasAddon(service.libreelec.settings)</visible>
 		</control>
-		<control type="button" id="901206">
+		<control type="button" id="901207">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>OpenELEC</label>
 			<onclick>RunAddon(service.openelec.settings)</onclick>
 			<visible>System.HasAddon(service.openelec.settings)</visible>
 		</control>
-		<control type="image" id="901207">
+		<control type="image" id="901208">
 			<width>52</width>
 			<height>52</height>
 			<texture border="0,0,0,4">HomeSubEnd.png</texture>

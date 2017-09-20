@@ -208,7 +208,7 @@
 					<onright>60</onright>
 					<onup>9001</onup>
 					<ondown>9001</ondown>
-					<control type="label" id="100">
+					<control type="label" id="99">
 						<width>1125</width>
 						<height>68</height>
 						<font>font13_title</font>
@@ -217,6 +217,20 @@
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+					</control>
+					<control type="button" id="100">
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[33061] position</label>
+						<label2>$INFO[Skin.String(MainMenuPosition)]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="Skin.String(MainMenuPosition,$LOCALIZE[393])">Skin.SetString(MainMenuPosition,$LOCALIZE[571])</onclick>
+						<onclick condition="Skin.String(MainMenuPosition,$LOCALIZE[391])">Skin.SetString(MainMenuPosition,$LOCALIZE[393])</onclick>
+						<onclick condition="!Skin.String(MainMenuPosition) | Skin.String(MainMenuPosition,$LOCALIZE[571])">Skin.SetString(MainMenuPosition,$LOCALIZE[391])</onclick>
 					</control>
 					<control type="radiobutton" id="101">
 						<width>1125</width>
@@ -419,16 +433,58 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="208">
-						<description>Show miscellanious widgets</description>
+						<description>Show weather widgets</description>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31113]</label>
+						<label2></label2>
+						<onclick>Skin.ToggleSetting(HomepageHideWeatherWidget)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideWeatherWidget)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="209">
+						<description>Show pictures widget</description>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31114]</label>
+						<label2></label2>
+						<onclick>Skin.ToggleSetting(HomepageHidePicturesWidget)</onclick>
+						<selected>!Skin.HasSetting(HomepageHidePicturesWidget)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="210">
+						<description>Show programs widget</description>
 						<width>1125</width>
 						<height>60</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31115]</label>
-						<label2>    [COLOR=grey3] ($LOCALIZE[24027], $LOCALIZE[1] &amp; $LOCALIZE[0])[/COLOR]      </label2>
-						<onclick>Skin.ToggleSetting(HomepageHideMiscellaniousWidgets)</onclick>
-						<selected>!Skin.HasSetting(HomepageHideMiscellaniousWidgets)</selected>
+						<label2></label2>
+						<onclick>Skin.ToggleSetting(HomepageHideProgramsWidget)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideProgramsWidget)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="211">
+						<description>Show settings widget</description>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31120]</label>
+						<label2></label2>
+						<onclick>Skin.ToggleSetting(HomepageHideSettingsWidget)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideSettingsWidget)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -612,7 +668,7 @@
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[13000]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[5]</label>
 						<label2>    [COLOR=grey3]($LOCALIZE[1223]? $LOCALIZE[5] $LOCALIZE[1405] $LOCALIZE[33060]-$LOCALIZE[33061])[/COLOR]      </label2>
 						<onclick>Skin.ToggleSetting(HomeMenuNoSystemButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSystemButton)</selected>

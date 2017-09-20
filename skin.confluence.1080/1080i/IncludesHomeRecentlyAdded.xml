@@ -2,6 +2,8 @@
 <includes>
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group" id="9003">
+			<animation effect="slide" end="0,373" time="320" tween="cubic" easing="inout" condition="Skin.String(MainMenuPosition,$LOCALIZE[391])">Conditional</animation>
+			<animation effect="slide" end="0,480" time="320" tween="cubic" easing="inout" condition="Skin.String(MainMenuPosition,$LOCALIZE[393])">Conditional</animation>
 			<depth>DepthMenu</depth>
 			<onup>9004</onup>
 			<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
@@ -834,12 +836,12 @@
 				<control type="label">
 					<visible>Library.HasContent(Movies)</visible>
 					<description>Title label</description>
-					<left>1046</left>
+					<left>1032</left>
 					<top>330</top>
 					<height>30</height>
-					<width>720</width>
+					<width>710</width>
 					<label>$LOCALIZE[20342] - $VAR[MoviesWidgetLabel] $INFO[Container(8003).NumItems,(,)]</label>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
 					<textcolor>white</textcolor>
@@ -848,12 +850,12 @@
 				<control type="label">
 					<visible>Library.HasContent(TVShows)</visible>
 					<description>Title label</description>
-					<left>-24</left>
+					<left>5</left>
 					<top>330</top>
 					<height>30</height>
-					<width>768</width>
+					<width>710</width>
 					<label>$LOCALIZE[20343] - $VAR[TVShowsWidgetLabel] $INFO[Container(8004).NumItems,(,)]</label>
-					<align>center</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
 					<textcolor>white</textcolor>
@@ -1001,7 +1003,7 @@
 					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8015).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8015).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8015).NumItems,1)">conditional</animation>
-					<left>191</left>
+					<left>384</left>
 					<top>-66</top>
 					<width>350</width>
 					<height>56</height>
@@ -1208,7 +1210,7 @@
 					<animation effect="slide" start="0,0" end="84,0" time="0" condition="String.IsEqual(Container(8014).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="112,0" time="0" condition="String.IsEqual(Container(8014).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="140,0" time="0" condition="String.IsEqual(Container(8014).NumItems,1)">conditional</animation>
-					<left>1239</left>
+					<left>1025</left>
 					<top>-66</top>
 					<width>350</width>
 					<height>56</height>
@@ -2191,7 +2193,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(7) + Weather.IsFetched + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(7) + Weather.IsFetched + !Skin.HasSetting(HomepageHideWeatherWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2436,7 +2438,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(4) + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(4) + !Skin.HasSetting(HomepageHidePicturesWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -2713,7 +2715,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(5) + !Skin.HasSetting(HomepageHideMiscellaniousWidgets)</visible>
+				<visible>Container(9000).Hasfocus(5) + !Skin.HasSetting(HomepageHideSettingsWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
@@ -3013,7 +3015,7 @@
 			<control type="group">
 				<left>60</left>
 				<top>75</top>
-				<visible>Container(9000).Hasfocus(1) + !Skin.HasSetting(HomepageHideRecentlyAddedPrograms)</visible>
+				<visible>Container(9000).Hasfocus(1) + !Skin.HasSetting(HomepageHideProgramsWidget)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
