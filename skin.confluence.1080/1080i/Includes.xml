@@ -987,9 +987,6 @@
 			<animation effect="slide" start="0,0" end="-60,0" time="75" condition="Player.Muted">conditional</animation>
 		</control>
 	</include>
-	<include name="AddonsPosition">
-		<top>285r</top>
-	</include>
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>
 		<animation effect="slide" end="0,-727" time="320" tween="cubic" easing="inout" condition="Skin.String(MainMenuPosition,$LOCALIZE[391])">Conditional</animation>
@@ -1002,7 +999,7 @@
 			<effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="225" />
 			<effect type="fade" start="100" end="0" time="225" />
 		</animation>
-		<hitrect x="0" y="795" w="1920" h="180" />
+		<hitrect x="0" y="1295" w="1920" h="220" />
 		<left>0</left>
 		<top>285r</top>
 		<width>1920</width>
@@ -1597,506 +1594,266 @@
 			<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
 		</item>
 	</include>
-	<include name="MainMenuMusicInfo">
-		<depth>DepthMenu</depth>
-		<top>90</top>
-		<left>0</left>
-		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
-		<include>VisibleFadeEffect</include>
-		<include>Window_OpenClose_Animation</include>
-		<control type="image">
-			<description>Cover image</description>
-			<left>30</left>
-			<top>68</top>
-			<width>195</width>
-			<height>442</height>
-			<aspectratio aligny="bottom">keep</aspectratio>
-			<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-			<bordertexture border="12">ThumbBorder.png</bordertexture>
-			<bordersize>8</bordersize>
-		</control>
-		<control type="label">
-			<description>Album Label</description>
-			<left>255</left>
-			<top>398</top>
-			<height>38</height>
-			<width>1500</width>
-			<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-		</control>
-		<control type="label">
-			<description>Title label</description>
-			<left>255</left>
-			<top>428</top>
-			<height>45</height>
-			<width>1500</width>
-			<label>$INFO[Player.Title]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font13_title</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-		</control>
-		<control type="label">
-			<description>Time Label</description>
-			<left>255</left>
-			<top>465</top>
-			<height>45</height>
-			<width>450</width>
-			<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-		</control>
-	</include>
-	<include name="MainMenuLiveTvInfo">
-		<depth>DepthMenu</depth>
-		<left>735r</left>
-		<visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
-		<include>VisibleFadeEffect</include>
-		<include>Window_OpenClose_Animation</include>
-		<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(Favourites)">conditional</animation>
-		<control type="group">
-			<animation effect="slide" start="0,0" end="0,150" time="0" condition="PVR.IsRecording">conditional</animation>
-			<visible>PVR.HasNonRecordingTimer</visible>
-			<control type="image">
-				<left>0</left>
-				<top>-8</top>
-				<width>735</width>
-				<height>135</height>
-				<texture>gradient.png</texture>
-			</control>
-			<control type="image">
-				<left>600</left>
+	<include name="InfoList">
+		<param name="item_label">[COLOR blue]$INFO[ListItem.Year][/COLOR] - $INFO[ListItem.Label]</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">45</param>
+		<param name="bottom">80</param>
+		<param name="width">600</param>
+		<param name="list_id">5000</param>
+		<param name="font">font13</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
 				<top>0</top>
-				<width>120</width>
-				<height>120</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
-				<bordertexture border="12">ThumbBorder.png</bordertexture>
-				<bordersize>6</bordersize>
+				<width>$PARAM[width]</width>
+				<bottom>$PARAM[bottom]</bottom>
+				<orientation>vertical</orientation>
+				<visible>$PARAM[visible]</visible>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>0</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>0</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
 			</control>
-			<control type="image">
-				<left>548</left>
-				<top>8</top>
-				<width>38</width>
-				<height>38</height>
-				<aspectratio>keep</aspectratio>
-				<texture>PVR-HasTimer.png</texture>
-			</control>
-			<control type="label">
-				<description>Next Timer Header label</description>
-				<left>-68</left>
-				<top>8</top>
-				<height>38</height>
-				<width>600</width>
-				<label>$LOCALIZE[19157]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12_title</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>NextRecordingDateTime</description>
-				<left>-15</left>
-				<top>45</top>
-				<height>38</height>
-				<width>600</width>
-				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<scroll>true</scroll>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>NextRecordingTitle Channel</description>
-				<left>-615</left>
-				<top>75</top>
-				<height>38</height>
-				<width>1200</width>
-				<label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12_title</font>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-			</control>
-		</control>
-		<control type="group">
-			<visible>PVR.IsRecording</visible>
-			<control type="image">
-				<left>0</left>
-				<top>-8</top>
-				<width>735</width>
-				<height>135</height>
-				<texture>gradient.png</texture>
-			</control>
-			<control type="image">
-				<left>600</left>
+		</definition>
+	</include>
+	<include name="InfoList2">
+		<param name="item_label">$INFO[ListItem.Label]</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">45</param>
+		<param name="bottom">100</param>
+		<param name="width">600</param>
+		<param name="list_id">5000</param>
+		<param name="font">font13</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
 				<top>0</top>
-				<width>120</width>
-				<height>120</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
-				<bordertexture border="12">ThumbBorder.png</bordertexture>
-				<bordersize>6</bordersize>
+				<width>$PARAM[width]</width>
+				<bottom>$PARAM[bottom]</bottom>
+				<orientation>vertical</orientation>
+				<visible>$PARAM[visible]</visible>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>0</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>0</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
 			</control>
-			<control type="image">
-				<left>548</left>
-				<top>8</top>
-				<width>38</width>
-				<height>38</height>
-				<aspectratio>keep</aspectratio>
-				<texture>PVR-IsRecording.png</texture>
-			</control>
-			<control type="label">
-				<description>Is Recording Header label</description>
-				<left>-68</left>
-				<top>8</top>
-				<height>38</height>
-				<width>600</width>
-				<label>$LOCALIZE[19158]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12_title</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>NextRecordingDateTime</description>
-				<left>-15</left>
-				<top>45</top>
-				<height>38</height>
-				<width>600</width>
-				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<scroll>true</scroll>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>NextRecordingTitle Channel</description>
-				<left>-615</left>
-				<top>75</top>
-				<height>45</height>
-				<width>1200</width>
-				<label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12_title</font>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-			</control>
-		</control>
+		</definition>
 	</include>
-	<include name="MainMenu">
-		<control type="group">
-			<depth>DepthMenu</depth>
-			<top>600</top>
-			<include>MainMenuAnimation</include>
-			<control type="group" id="9001">
-				<depth>DepthMenu-</depth>
-				<left>0</left>
-				<top>105</top>
-				<onup>9000</onup>
-				<ondown>9002</ondown>
-				<animation effect="slide" end="0,-1080" time="320" tween="cubic" easing="inout" condition="Skin.String(MainMenuPosition,$LOCALIZE[391])">Conditional</animation>
-				<include>MainMenuSubItems</include>
-			</control>
-			<include>MainMenuImages</include>
-			<control type="fixedlist" id="9000">
-				<include>MainMenuFixedList</include>
-				<content>
-					<include>MainMenuItems</include>
-				</content>
-			</control>
-			<include>MainMenuSideFade</include>
-		</control>
-	</include>
-	<include name="MainMenuAnimation">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="225" />
-			<effect type="fade" start="0" end="100" time="225" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="225" />
-			<effect type="fade" start="100" end="0" time="225" />
-		</animation>
-	</include>
-	<include name="MainMenuSubItems">
-		<control type="grouplist" id="9010">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9010</onleft>
-			<onright>9010</onright>
-			<visible>Container(9000).HasFocus(2)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuVideos</include>
-		</control>
-		<control type="grouplist" id="9016">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9016</onleft>
-			<onright>9016</onright>
-			<visible>Container(9000).HasFocus(10)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuMovies</include>
-		</control>
-		<control type="grouplist" id="9017">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9017</onleft>
-			<onright>9017</onright>
-			<visible>Container(9000).HasFocus(11)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuTVShows</include>
-		</control>
-		<control type="grouplist" id="9011">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9011</onleft>
-			<onright>9011</onright>
-			<visible>Container(9000).HasFocus(3)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuMusic</include>
-		</control>
-		<control type="grouplist" id="9012">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9012</onleft>
-			<onright>9012</onright>
-			<visible>Container(9000).HasFocus(1)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuPrograms</include>
-		</control>
-		<control type="grouplist" id="9013">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9013</onleft>
-			<onright>9013</onright>
-			<visible>Container(9000).HasFocus(6)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuPlayDisc</include>
-		</control>
-		<control type="grouplist" id="9014">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9014</onleft>
-			<onright>9014</onright>
-			<visible>Container(9000).HasFocus(4)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuPictures</include>
-		</control>
-		<control type="grouplist" id="9015">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9015</onleft>
-			<onright>9015</onright>
-			<visible>Container(9000).HasFocus(5)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuSystem</include>
-		</control>
-		<control type="grouplist" id="9019">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9019</onleft>
-			<onright>9019</onright>
-			<visible>Container(9000).HasFocus(12)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuTV</include>
-		</control>
-		<control type="grouplist" id="9020">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9020</onleft>
-			<onright>9020</onright>
-			<visible>Container(9000).HasFocus(13)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuRadio</include>
-		</control>
-		<control type="grouplist" id="9018">
-			<include>HomeSubMenuCommonValues</include>
-			<onleft>9018</onleft>
-			<onright>9018</onright>
-			<visible>Container(9000).HasFocus(14)</visible>
-			<!-- Buttons for the grouplist -->
-			<include>HomeSubMenuMusicVideos</include>
-		</control>
-	</include>
-	<include name="MainMenuImages">
-		<control type="image">
-			<left>-150</left>
-			<top>0</top>
-			<width>2220</width>
-			<height>112</height>
-			<texture border="0,9,0,9">HomeBack.png</texture>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>8</top>
-			<width>1920</width>
-			<height>9</height>
-			<texture>HomeOverlay1.png</texture>
-		</control>
-	</include>
-	<include name="MainMenuFixedList">
-		<left>-290</left>
-		<top>8</top>
-		<width>2350</width>
-		<height>90</height>
-		<onleft>9000</onleft>
-		<onright>9000</onright>
-		<onup condition="System.HasAddon(script.globalsearch)">608</onup>
-		<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
-		<ondown>9001</ondown>
-		<pagecontrol>-</pagecontrol>
-		<scrolltime>300</scrolltime>
-		<focusposition>2</focusposition>
-		<movement>1</movement>
-		<orientation>Horizontal</orientation>
-		<itemlayout height="90" width="500">
-			<control type="label">
-				<left>8</left>
+	<include name="InfoPanel2">
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="panel_height">360</param>
+		<param name="panel_width">1200</param>
+		<param name="image_height">180</param>
+		<param name="item_height">225</param>
+		<param name="bottom">100</param>
+		<param name="width">600</param>
+		<param name="list_id">5000</param>
+		<param name="font">font13</param>
+		<param name="orientation">horizontal</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
 				<top>0</top>
-				<width>485</width>
-				<height>90</height>
-				<font>font_MainMenu</font>
-				<textcolor>grey3</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
+				<heigth>$PARAM[panel_heigth]</heigth>
+				<width>$PARAM[panel_width]</width>
+				<bottom>$PARAM[panel_bottom]</bottom>
+				<orientation>$PARAM[orientation]</orientation>
+				<visible>$PARAM[visible]</visible>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="image">
+						<left>3</left>
+						<top>0</top>
+						<width>120</width>
+						<height>$PARAM[image_height]</height>
+						<aspectratio>scale</aspectratio>
+						<bordertexture border="8">button-nofocus.png</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>150</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+					<control type="label">
+						<top>45</top>
+						<left>150</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Plot]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="image">
+						<left>3</left>
+						<top>0</top>
+						<width>120</width>
+						<height>$PARAM[image_height]</height>
+						<aspectratio>scale</aspectratio>
+						<bordertexture border="8">button-nofocus.png</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>150</left>
+						<height>45]</height>
+						<width>$PARAM[width]</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<left>150</left>
+						<top>45</top>
+						<width>500</width>
+						<height>145</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
 			</control>
-		</itemlayout>
-		<focusedlayout height="90" width="500">
-			<control type="label">
-				<left>8</left>
-				<top>0</top>
-				<width>485</width>
-				<height>90</height>
-				<font>font_MainMenu</font>
-				<textcolor>grey3</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-			</control>
-			<control type="label">
-				<left>8</left>
-				<top>0</top>
-				<width>485</width>
-				<height>90</height>
-				<font>font_MainMenu</font>
-				<textcolor>blue</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>Control.HasFocus(9000)</visible>
-				<include>VisibleFadeEffect</include>
-			</control>
-		</focusedlayout>
+		</definition>
 	</include>
-	<include name="MainMenuItems">
-		<item id="7">
-			<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
-			<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
-			<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-		</item>
-		<item id="4">
-			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
-			<onclick>ActivateWindow(Pictures)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
-		</item>
-		<item id="13">
-			<label>[UPPERCASE]$LOCALIZE[19021][/UPPERCASE]</label>
-			<onclick>ActivateWindow(RadioChannels)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoRadioButton) + PVR.HasRadioChannels</visible>
-		</item>
-		<item id="12">
-			<label>[UPPERCASE]$LOCALIZE[19020][/UPPERCASE]</label>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoTVButton) + PVR.HasTVChannels</visible>
-		</item>
-		<item id="2">
-			<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
-			<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-			<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-		</item>
-		<item id="10">
-			<label>[UPPERCASE]$LOCALIZE[20342][/UPPERCASE]</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
-		</item>
-		<item id="11">
-			<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
-		</item>
-		<item id="14">
-			<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
-			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton) + Library.HasContent(MusicVideos)</visible>
-		</item>
-		<item id="3">
-			<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
-			<onclick condition="String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music)</onclick>
-			<onclick condition="!String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music,root)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
-		</item>
-		<item id="1">
-			<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
-			<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
-			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-		</item>
-		<item id="6">
-			<label>[UPPERCASE]$LOCALIZE[341][/UPPERCASE]</label>
-			<onclick>PlayDVD()</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>System.HasMediaDVD + !Skin.HasSetting(HomeMenuNoDiscButton)</visible>
-		</item>
-		<item id="5">
-			<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-			<onclick>ActivateWindow(Settings)</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoSystemButton)</visible>
-		</item>
-	</include>
-	<include name="MainMenuSideFade">
-		<control type="image">
-			<left>-15</left>
-			<top>9</top>
-			<width>207</width>
-			<height>94</height>
-			<texture>SideFade.png</texture>
-		</control>
-		<control type="image">
-			<left>192r</left>
-			<top>9</top>
-			<width>207</width>
-			<height>94</height>
-			<texture flipx="true">SideFade.png</texture>
-		</control>
+	<include name="InfoPanel">
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
+				<top>-20</top>
+				<heigth>565</heigth>
+				<width>1260</width>
+				<bottom>200</bottom>
+				<orientation>horizontal</orientation>
+				<focusedlayout height="280" width="600">
+				</focusedlayout>
+				<itemlayout height="280" width="600">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<height>240</height>
+						<width>160</width>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="8">button-nofocus.png</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<left>160</left>
+						<height>45</height>
+						<width>440</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>[COLOR blue]$INFO[ListItem.Year][/COLOR] - $INFO[ListItem.Label]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>font13</font>
+					</control>
+					<control type="label">
+						<top>45</top>
+						<left>160</left>
+						<height>45</height>
+						<width>440</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Duration,, $LOCALIZE[12391]] - $INFO[ListItem.RatingAndVotes]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>font13</font>
+					</control>
+					<control type="label">
+						<top>90</top>
+						<left>160</left>
+						<height>45</height>
+						<width>440</width>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Genre]</label>
+						<shadowcolor>black</shadowcolor>
+						<font>font13</font>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<left>160</left>
+						<top>135</top>
+						<width>440</width>
+						<height>115</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+			</control>
+		</definition>
 	</include>
 </includes>

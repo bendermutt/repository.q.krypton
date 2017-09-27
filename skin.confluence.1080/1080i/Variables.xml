@@ -247,4 +247,8 @@
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">$LOCALIZE[19057]</value>
 		<value condition="ListItem.HasTimer">$LOCALIZE[31510]</value>
 	</variable>
+	<variable name="InfoListPathVar">
+		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
+		<value></value>
+	</variable>
 </includes>

@@ -364,6 +364,15 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
+					<control type="image">
+						<left>255</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture flipx="true">icon_sets.png</texture>
+						<visible>ListItem.IsCollection</visible>
+					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="414" width="324">
 					<control type="image">
@@ -395,6 +404,15 @@
 						<height>45</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+					<control type="image">
+						<left>255</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture flipx="true">icon_sets.png</texture>
+						<visible>ListItem.IsCollection</visible>
 					</control>
 				</focusedlayout>
 			</control>

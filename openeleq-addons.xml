@@ -64,7 +64,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.1080" version="3.0.56" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
+<addon id="skin.confluence.1080" version="3.0.57" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 	</requires>
@@ -202,18 +202,8 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
-		<news>Added two mainmenu positions: "high" and "low" / Changed label "system" to "settings" / Changed position of title for Videos-widget to avoid it overlapping now playing info / Changed weather, pictures, programs and settings widget, they can now be dis- or enabled seperately / Changed layout of MusicInfo from 2 rows to three / Removed DefaultAlbumCover.png from MusicInfo</news>
+		<news>Added appropriate moviesets-icon and overlay / Added collection-indicators to all views that did not have them / Added collection info / Fixed clickable area for addon shortcuts / Fixed video- and movie-now-playing info not changing position according to set mainmenu-position / Edited default tv background / Removed screenshots from zip</news>
 	</extension>
 </addon>
 </addons>

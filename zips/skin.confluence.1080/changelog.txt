@@ -1,3 +1,12 @@
+[B]3.0.57[/B]
+- Added appropriate moviesets-icon and overlay
+- Added collection-indicators to all views that did not have them
+- Added collection info
+- Fixed clickable area for addon shortcuts
+- Fixed video- and movie-now-playing info not changing position according to set mainmenu-position
+- Edited default tv background
+- Removed screenshots from zip
+
 [B]3.0.56[/B]
 - Added two mainmenu positions: "high" and "low"
 - Changed label "system" to "settings"
