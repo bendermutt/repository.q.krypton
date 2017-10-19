@@ -7,72 +7,48 @@
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
 	<controls>
-		<control type="list" id="90100">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="10">library://video/</content>
-			<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-		</control>
-		<control type="list" id="90110">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="music" limit="10">library://music/</content>
-			<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
-		</control>
-		<control type="list" id="90120">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="addonbrowser" limit="10">addons://</content>
-			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-		</control>
-		<control type="list" id="90160">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="10">library://video/movies/</content>
-			<visible>Library.HasContent(Movies) + !Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
-		</control>
-		<control type="list" id="90170">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="10">library://video/tvshows/</content>
-			<visible>Library.HasContent(TVShows) + !Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
-		</control>
-		<control type="list" id="90180">
-			<left>-15</left>
-			<top>-15</top>
-			<width>1</width>
-			<height>1</height>
-			<viewtype label="535">list</viewtype>
-			<itemlayout height="1" width="1"></itemlayout>
-			<focusedlayout height="1" width="1"></focusedlayout>
-			<content target="video" limit="10">library://video/musicvideos/</content>
-			<visible>Library.HasContent(MusicVideos) + !Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
-		</control>
+		<include content="SubMenuNodes" name="VideosSubMenu">
+			<param name="id">90100</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="path">library://video/</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
+		<include content="SubMenuNodes" name="MusicSubMenu">
+			<param name="id">90110</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="path">library://music/</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
+		<include content="SubMenuNodes" name="ProgramsSubMenu">
+			<param name="id">90120</param>
+			<param name="path">addons://</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
+		<include content="SubMenuNodes" name="MoviesSubMenu">
+			<param name="id">90160</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="path">library://video/movies/</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
+		<include content="SubMenuNodes" name="TVShowsSubMenu">
+			<param name="id">90170</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="path">library://video/tvshows/</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
+		<include content="SubMenuNodes" name="MusicVideosSubMenu">
+			<param name="id">90180</param>
+			<param name="items">$VAR[NodeSortItems]</param>
+			<param name="path">library://video/musicvideos/</param>
+			<param name="sortby">$VAR[NodeSortBy]</param>
+			<param name="sortorder">$VAR[NodeSortOrder]</param>
+		</include>
 		<include>CommonBackground</include>
 		<control type="image">
 			<visible>Skin.String(MainMenuPosition,$LOCALIZE[391])</visible>

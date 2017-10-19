@@ -251,4 +251,19 @@
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
 		<value></value>
 	</variable>
+	<variable name="NodeSortBy">
+		<value condition="Skin.String(NodeSort.By,$LOCALIZE[551])">label</value>
+		<value condition="Skin.String(NodeSort.By,$LOCALIZE[13278])">default</value>
+		<value condition="Skin.String(NodeSort.By,$LOCALIZE[573])">path</value>
+		<value></value>
+	</variable>
+	<variable name="NodeSortOrder">
+		<value condition="Skin.String(NodeSort.Order,$LOCALIZE[584])">ascending</value>
+		<value condition="Skin.String(NodeSort.Order,$LOCALIZE[585])">descending</value>
+		<value>ascending</value>
+	</variable>
+	<variable name="NodeSortItems">
+		<value condition="Skin.String(NodeSort.Items)">$INFO[Skin.String(NodeSort.Items)]</value>
+		<value>10</value>
+	</variable>
 </includes>

@@ -64,7 +64,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.1080" version="3.0.57" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
+<addon id="skin.confluence.1080" version="3.0.58" name="Confluence 1080" provider-name="[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR], original work by Jezz_X &amp; Team Kodi">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 	</requires>
@@ -203,7 +203,7 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>Added appropriate moviesets-icon and overlay / Added collection-indicators to all views that did not have them / Added collection info / Fixed clickable area for addon shortcuts / Fixed video- and movie-now-playing info not changing position according to set mainmenu-position / Edited default tv background / Removed screenshots from zip</news>
+		<news>Added configurable sorting methods and direction to node-based submenus / Tweaked pvr-widgets</news>
 	</extension>
 </addon>
 </addons>

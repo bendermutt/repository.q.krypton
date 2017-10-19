@@ -103,8 +103,9 @@
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-				<onup condition="!VideoPlayer.HasSubtitles">ActivateWindow(SubtitleSearch)</onup>
-				<onup condition="VideoPlayer.HasSubtitles">SubtitleDelay</onup>
+				<onclick condition="!VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">Dialog.Close(VideoOSD)</onclick>
+				<onup condition="!VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">ActivateWindow(SubtitleSearch)</onup>
+				<onup condition="VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">SubtitleDelay</onup>
 				<ondown>AudioDelay</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 				<enable>Player.PauseEnabled</enable>

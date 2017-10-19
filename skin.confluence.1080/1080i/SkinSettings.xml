@@ -208,7 +208,7 @@
 					<onright>60</onright>
 					<onup>9001</onup>
 					<ondown>9001</ondown>
-					<control type="label" id="99">
+					<control type="label" id="96">
 						<width>1125</width>
 						<height>68</height>
 						<font>font13_title</font>
@@ -217,6 +217,61 @@
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+					</control>
+					<control type="button" id="97">
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[1034] (node) $LOCALIZE[581]</label>
+						<label2>$INFO[Skin.String(NodeSort.By)]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="!Skin.String(NodeSort.By,$LOCALIZE[13278]) + !Skin.String(NodeSort.By,$LOCALIZE[551]) + !Skin.String(NodeSort.By,$LOCALIZE[573])">Skin.Reset(NodeSort.By)</onclick>
+						<onclick condition="Skin.String(NodeSort.By,$LOCALIZE[13278])">Skin.SetString(NodeSort.By,$LOCALIZE[551])</onclick>
+						<onclick condition="Skin.String(NodeSort.By,$LOCALIZE[551])">Skin.SetString(NodeSort.By,$LOCALIZE[573])</onclick>
+						<onclick condition="Skin.String(NodeSort.By,$LOCALIZE[573])">Skin.SetString(NodeSort.By,$LOCALIZE[13278])</onclick>
+						<onclick condition="!Skin.String(NodeSort.By)">Skin.SetString(NodeSort.By,$LOCALIZE[573])</onclick>
+						<onclick>ReloadSkin()</onclick>
+					</control>
+					<control type="button" id="98">
+						<visible>Skin.String(NodeSort.By) + !Skin.String(NodeSort.By,$LOCALIZE[571])</visible>
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[1034] (node) $LOCALIZE[580]</label>
+						<label2>$INFO[Skin.String(NodeSort.Order)]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="!Skin.String(NodeSort.Order,$LOCALIZE[585]) + !Skin.String(NodeSort.By,$LOCALIZE[584])">Skin.Reset(NodeSort.Order)</onclick>
+						<onclick condition="Skin.String(NodeSort.Order,$LOCALIZE[584])">Skin.SetString(NodeSort.Order,$LOCALIZE[585])</onclick>
+						<onclick condition="Skin.String(NodeSort.Order,$LOCALIZE[585])">Skin.SetString(NodeSort.Order,$LOCALIZE[584])</onclick>
+						<onclick condition="!Skin.String(NodeSort.Order)">Skin.SetString(NodeSort.Order,$LOCALIZE[585])</onclick>
+						<onclick>ReloadSkin()</onclick>
+					</control>
+					<control type="button" id="99">
+						<width>1125</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$LOCALIZE[1034] (node) items</label>
+						<label2>$VAR[NodeSortItems]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="!Skin.String(NodeSort.Items)">Skin.SetString(NodeSort.Items,1)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,1)">Skin.SetString(NodeSort.Items,2)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,2)">Skin.SetString(NodeSort.Items,3)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,3)">Skin.SetString(NodeSort.Items,4)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,4)">Skin.SetString(NodeSort.Items,5)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,5)">Skin.SetString(NodeSort.Items,6)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,6)">Skin.SetString(NodeSort.Items,7)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,7)">Skin.SetString(NodeSort.Items,8)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,8)">Skin.SetString(NodeSort.Items,9)</onclick>
+						<onclick condition="Skin.String(NodeSort.Items,9)">Skin.Reset(NodeSort.Items)</onclick>
 					</control>
 					<control type="button" id="100">
 						<width>1125</width>
@@ -230,7 +285,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick condition="Skin.String(MainMenuPosition,$LOCALIZE[393])">Skin.SetString(MainMenuPosition,$LOCALIZE[571])</onclick>
 						<onclick condition="Skin.String(MainMenuPosition,$LOCALIZE[391])">Skin.SetString(MainMenuPosition,$LOCALIZE[393])</onclick>
-						<onclick condition="!Skin.String(MainMenuPosition) | Skin.String(MainMenuPosition,$LOCALIZE[571])">Skin.SetString(MainMenuPosition,$LOCALIZE[391])</onclick>
+						<onclick condition="!Skin.String(MainMenuPosition) | ![Skin.String(MainMenuPosition,$LOCALIZE[393]) | Skin.String(MainMenuPosition,$LOCALIZE[391])]">Skin.SetString(MainMenuPosition,$LOCALIZE[391])</onclick>
 					</control>
 					<control type="radiobutton" id="101">
 						<width>1125</width>

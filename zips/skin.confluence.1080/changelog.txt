@@ -1,3 +1,7 @@
+[B]3.0.58[/B]
+- Added configurable sorting methods & direction to node-based submenus
+- Tweaked pvr-widgets
+
 [B]3.0.57[/B]
 - Added appropriate moviesets-icon and overlay
 - Added collection-indicators to all views that did not have them

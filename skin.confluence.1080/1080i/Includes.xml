@@ -1856,4 +1856,16 @@
 			</control>
 		</definition>
 	</include>
+	<include name="SubMenuNodes">
+		<control type="list" id="$PARAM[id]">
+			<itemlayout height="1" width="1"></itemlayout>
+			<content target="files" limit="$PARAM[items]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+		</control>
+	</include>
+	<include name="ProfileList">
+		<control type="list" id="$PARAM[id]">
+			<itemlayout height="1" width="1"></itemlayout>
+			<content target="files" limit="$PARAM[items]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+		</control>
+	</include>
 </includes>
